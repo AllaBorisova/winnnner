@@ -1,0 +1,6 @@
+.icon-light {
+  @include wh(38px);
+  background: url(../img/btn-light.svg) center no-repeat;
+  background-size: contain;
+  @include flexcc;
+}

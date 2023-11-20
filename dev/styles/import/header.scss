@@ -1,0 +1,103 @@
+.header {
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-radius: 12px;
+    border: 2px solid #b9c4d2;
+
+    background: #f2f3f7;
+
+    box-shadow: 2px 3px 0px 0px #b9c8dc;
+    padding: 8px 8px 8px 12px;
+    &:before {
+      content: '';
+      width: 96px;
+      height: 25px;
+      background: url(../img/header-glare.svg);
+      background-size: contain;
+      position: absolute;
+      top: 2px;
+      left: 3px;
+      display: block;
+    }
+  }
+  &__logo {
+    svg {
+      @include wh(40px);
+    }
+  }
+}
+
+.header-wallet {
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  // svg {
+  //   @include wh(16px);
+  // }
+  &__value {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+}
+.svg-token {
+  display: flex;
+  @include wh(16px);
+  background: url(../img/token.svg);
+  background-size: contain;
+}
+
+.header-tokens {
+  &__title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  &__value {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+  &__desc {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  &__plus {
+    @include wh(16px);
+    background-image: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__question {
+    @include wh(16px);
+    background-image: url(../img/question.svg);
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.header-btn-hamburger {
+  @include flexcc;
+  width: 48px;
+  height: 44px;
+  background-image: url(../img/hamburger-full.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  filter: drop-shadow(0px 4px 0px #2153cb);
+  border-radius: 8px;
+}

@@ -1,0 +1,17 @@
+mixin svg(name)
+	svg&attributes(attributes)
+		use(xlink:href=`./img/sprite.svg#${name}`)
+mixin news(imgsrc, category, name, preview, views)
+	.news__item
+		a.news__img(style='background-image:url(./img/' + imgsrc +')')
+		.news__desc
+			.accent-category.news__category= category
+			a.news__name(href="")= name
+			.news__preview= preview
+			.news__views
+				+svg("eye")
+				span= views
+mixin job-options (...texts)
+	.job-body__options
+		each text in texts
+			.job-body__option= text

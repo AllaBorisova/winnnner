@@ -1,0 +1,70 @@
+main.main
+	.container
+
+		.tournament
+			.tournament__till-the-end До конца турнира
+			.tournament-timer 
+				.tournament-timer__couple 
+					.tournament-timer__count 0
+					.tournament-timer__count 9
+					.tournament-timer__text Часов
+				.tournament-timer__divider
+					span 
+					span
+				.tournament-timer__couple
+					.tournament-timer__count 3
+					.tournament-timer__count 4
+					.tournament-timer__text Минут
+				.tournament-timer__divider
+					span 
+					span
+				.tournament-timer__couple
+					.tournament-timer__count 5
+					.tournament-timer__count 1
+					.tournament-timer__text Секунд
+
+		.tournament-prize
+			.tournament-prize__title Призовой фонд
+			.tournament-prize__text 
+				span.tournament-prize__value 200 000
+				span.svg-token
+		
+		.game-block 
+			.game-block__buttons 
+				button.btn.btn-training Тренировка
+				button.btn.btn-start Старт
+		.statistics 
+			.statistics-info 
+				.statistics-info__icon.icon-light
+					img(src="./img/icon-reward.png" alt="")
+				.statistics-info__desc 
+					.statistics-info__name Моя награда
+					.statistics-info__value 6 000 W
+			.statistics-info 
+				.statistics-info__icon.icon-light
+					img(src="./img/icon-medal.png" alt="")
+				.statistics-info__desc 
+					.statistics-info__name Мое место
+					.statistics-info__value 7 
+			.statistics-info 
+				.statistics-info__icon.icon-light
+					img(src="./img/icon-timer.png" alt="")
+				.statistics-info__desc 
+					.statistics-info__name Лучший результат
+					.statistics-info__value 01:54:12
+			.statistics-info 
+				.statistics-info__icon.icon-light
+					img(src="./img/icon-online.png" alt="")
+				.statistics-info__desc 
+					.statistics-info__name Сейчас онлайн
+					.statistics-info__value 12 000
+		
+		.two-buttons 
+			button.btn.btn-left
+				.icon-light
+					img(src="./img/icon-rating.png" alt="")
+				| Рейтинг
+			button.btn.btn-right
+				.icon-light
+					img(src="./img/icon-rules.png" alt="")
+				| Правила

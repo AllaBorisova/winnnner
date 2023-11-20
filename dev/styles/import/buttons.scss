@@ -1,0 +1,60 @@
+.btn {
+  display: inline-flex;
+  background: none;
+  @include tr;
+  cursor: pointer;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  &-training {
+    width: 185px;
+    height: 58px;
+    background: url(../img/btn-training.svg) left center no-repeat;
+    background-size: contain;
+    font-size: 18px;
+    font-weight: 700;
+    color: #415868;
+    padding-left: 30px;
+  }
+  &-start {
+    width: 185px;
+    height: 58px;
+    background: url(../img/btn-start.svg) left center no-repeat;
+    margin-left: -27px;
+    background-size: contain;
+    font-size: 18px;
+    font-weight: 700;
+    color: #415868;
+    justify-content: flex-end;
+    padding-right: 57px;
+  }
+
+  &-left {
+    background: url(../img/btn-left.svg) left center no-repeat;
+    height: 58px;
+    width: 185px;
+    gap: 20px;
+    font-size: 16px;
+    color: #13265a;
+    font-weight: 500;
+    padding-left: 10px;
+    background-size: contain;
+  }
+  &-right {
+    background: url(../img/btn-right.svg) right center no-repeat;
+    height: 58px;
+    width: 185px;
+    gap: 20px;
+    font-size: 16px;
+    color: #13265a;
+    font-weight: 500;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+    margin-left: -27px;
+    background-size: contain;
+  }
+}

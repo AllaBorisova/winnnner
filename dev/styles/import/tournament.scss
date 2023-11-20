@@ -1,0 +1,81 @@
+.tournament {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &__till-the-end {
+    color: rgba(24, 28, 39, 0.5);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+  }
+}
+.tournament-timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5px;
+  &__couple {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  &__count {
+    @include flexcc;
+    @include wh(48px);
+    font-size: 32px;
+    font-weight: 700;
+    background-image: url(../img/bg-count.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__text {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  &__divider {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-top: 14px;
+    span {
+      @include wh(8px);
+      border-radius: 12px;
+
+      background: #f2f3f7;
+    }
+  }
+}
+
+.tournament-prize {
+  min-height: 98px;
+  margin-top: 16px;
+  background: url(../img/bg-prize.png) top center no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  &__title {
+    color: rgba(24, 28, 39, 0.5);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  &__text {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
