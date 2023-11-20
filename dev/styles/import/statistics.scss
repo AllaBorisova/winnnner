@@ -1,11 +1,13 @@
 .statistics {
   background: url(../img/bg-statistic.png) center top no-repeat;
+  background-size: cover;
   padding: 35px 12px 28px 12px;
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 14px;
   row-gap: 11px;
+  aspect-ratio: 343/160;
 
   &-info {
     display: flex;
