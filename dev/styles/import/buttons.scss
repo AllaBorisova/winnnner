@@ -43,6 +43,23 @@
     font-weight: 500;
     padding-left: 10px;
     background-size: contain;
+    @include tr;
+    @media screen and (min-width: $breakpoint-mobile) {
+      background: url(../img/btn-left-desktop.svg) left center no-repeat;
+      height: 64px;
+      height: 66px;
+      flex-direction: row;
+      gap: 8px;
+      padding-left: 32px;
+      .icon {
+        background: none;
+        width: auto;
+        height: auto;
+      }
+      &:hover {
+        background: url(../img/btn-left-desktop-hover.svg) left center no-repeat;
+      }
+    }
   }
   &-right {
     background: url(../img/btn-right.svg) right center no-repeat;
@@ -56,5 +73,28 @@
     padding-right: 10px;
     margin-left: -27px;
     background-size: contain;
+    // @include tr;
+    @media screen and (min-width: $breakpoint-mobile) {
+      background: url(../img/btn-right-desktop.svg) left center no-repeat;
+      height: 64px;
+      height: 66px;
+      flex-direction: row;
+      gap: 8px;
+      padding-left: 58px;
+      .icon {
+        background: none;
+        width: auto;
+        height: auto;
+      }
+      &:hover {
+        background: url(../img/btn-right-desktop-hover.svg) left center
+          no-repeat;
+      }
+      &:active {
+        background: url(../img/btn-right-desktop-active.svg) left center
+          no-repeat;
+        color: #fff;
+      }
+    }
   }
 }

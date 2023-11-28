@@ -1,6 +1,43 @@
-.icon-light {
+.icon {
   @include wh(38px);
   background: url(../img/btn-light.svg) center no-repeat;
   background-size: contain;
   @include flexcc;
+  line-height: 0;
+  @media screen and (min-width: $breakpoint-mobile) {
+    @include wh(50px);
+  }
+  &_rating:before {
+    content: url(../img/icon-rating.png);
+  }
+  &_rules:before {
+    content: url(../img/icon-rules.png);
+  }
+  &_wallet:before {
+    content: url(../img/icon-wallet.png);
+  }
+  &_reward:before {
+    content: url(../img/icon-reward.png);
+  }
+  &_evaluation:before {
+    content: url(../img/icon-evaluation.png);
+  }
+  &_flag:before {
+    content: url(../img/icon-flag.png);
+  }
+  &_dumbbell:before {
+    content: url(../img/icon-dumbbell.png);
+  }
+  &_coins:before {
+    content: url(../img/icon-coins.png);
+  }
+  &_info:before {
+    content: url(../img/icon-info.png);
+  }
+  &_logout:before {
+    content: url(../img/icon-logout.svg);
+  }
+  &_tokens:before {
+    content: url(../img/icon-tokens.png);
+  }
 }

@@ -1,7 +1,17 @@
-.two-buttons {
-  display: flex;
-  margin-top: 16px;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
+.logo {
+  svg {
+    @include wh(40px);
+    @media screen and (min-width: $breakpoint-mobile) {
+      @include wh(50px);
+    }
+  }
+}
+.main {
+  &__columns {
+    @media screen and (min-width: $breakpoint-mobile) {
+      display: grid;
+      grid-template-columns: auto 384px;
+      gap: 31px;
+    }
+  }
 }

@@ -1,0 +1,22 @@
+.footer {
+  display: none;
+  @media screen and (min-width: $breakpoint-mobile) {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(24, 28, 39, 0.5);
+    line-height: 140%;
+    display: block;
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__copyright {
+    }
+    &__menu {
+      @include ul-clean;
+      display: flex;
+      gap: 32px;
+    }
+  }
+}

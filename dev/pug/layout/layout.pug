@@ -8,6 +8,9 @@ html(lang="ru-RU")
 		title #{title}
 		include ../includes/links.pug
 	body
-		block header
-		block content
-		block footer
+		.page
+			block sidebar
+			.page__column
+				//- block header
+				block content
+				block footer

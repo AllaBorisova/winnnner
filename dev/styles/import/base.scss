@@ -11,6 +11,9 @@ html {
   scroll-behavior: smooth;
   background: url(../img/bg-mobile.jpg) center no-repeat;
   background-size: cover;
+  @media screen and (min-width: $breakpoint-mobile) {
+    background: url(../img/bg-mobile.jpg);
+  }
 }
 body {
   background: $bg-body;
@@ -47,13 +50,41 @@ button {
   cursor: pointer;
 }
 
-.container {
-  max-width: calc(100% - get-vw(120px));
+.page {
+  display: grid;
+  grid-template-columns: 90px auto;
+  gap: 40px;
+  // max-width: calc(100% - get-vw(120px));
+  max-width: 1426px;
+  padding: 0 40px;
+  padding-top: 32px;
   margin: 0 auto;
-  @media screen and (max-width: $breakpoint-tablet) {
-    max-width: calc(100% - 66px);
+  padding-bottom: 30px;
+  @media screen and (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
   }
   @media screen and (max-width: $breakpoint-mobile) {
     max-width: calc(100% - 32px);
+    padding: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @media screen and (max-width: $breakpoint-mobile) {
+      gap: 16px;
+    }
   }
 }
+// .container {
+//   max-width: calc(100% - get-vw(120px));
+//   margin: 0 auto;
+//   @media screen and (max-width: $breakpoint-tablet) {
+//     max-width: calc(100% - 66px);
+//   }
+//   @media screen and (max-width: $breakpoint-mobile) {
+//     max-width: calc(100% - 32px);
+//   }
+// }

@@ -1,19 +1,26 @@
 header.header
-	.header__container.container
-		a.header__logo(href="/")
-			+svg('logo')
+	.header__container
+		include ./components/logo/logo.pug
+		.header__title Мой баланс:
 		.header-wallet
-			.header-wallet__title Мой кошелек
-			.header-wallet__desc
-				span.header-wallet__value 950
-				span.svg-token
-					+svg('token')
+			.header-wallet__icon 
+				.icon.icon_wallet
+			.header-wallet__text
+				.header-wallet__title Мой кошелек
+				.header-wallet__desc
+					span.header-wallet__value 950
+					span.svg-token
+						+svg('token')
 		.header-tokens
-			.header-tokens__title Мои жетоны
+			.header-tokens__icon
+				.icon.icon_tokens
 			.header-tokens__desc
-				span.header-tokens__value 400
-				span.header-tokens__plus
-				span.header-tokens__question
+				.header-tokens__title Мои жетоны
+				.header-tokens__text
+					span.header-tokens__value 400
+					span.header-tokens__plus
+					span.header-tokens__question
+		button.btn.btn-blue Пополнить жетоны
 		button.header-btn-hamburger
 
 

@@ -6,12 +6,10 @@
     align-items: center;
     gap: 15px;
     border-radius: 12px;
-    // border: 2px solid #b9c4d2;
-
     background: #f2f3f7;
-
     box-shadow: 2px 3px 0px 0px #b9c8dc;
     padding: 8px 8px 8px 12px;
+
     &:before {
       content: '';
       width: 96px;
@@ -22,16 +20,38 @@
       top: 2px;
       left: 3px;
       display: block;
+      @media screen and (min-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: $breakpoint-mobile) {
+      border-radius: 16px;
+      padding: 25px 20px;
+      // gap: 32px;
+      // border: 2px solid #b9c4d2;
+      // background: #f2f3f7;
     }
   }
-  &__logo {
-    svg {
-      @include wh(40px);
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 130%;
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-mobile) {
+    .logo {
+      display: none;
     }
   }
 }
 
 .header-wallet {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   &__title {
     font-size: 14px;
     font-weight: 500;
@@ -42,15 +62,19 @@
     align-items: center;
     gap: 4px;
   }
-  // svg {
-  //   @include wh(16px);
-  // }
+
   &__value {
     font-size: 18px;
     font-weight: 700;
     line-height: 130%;
   }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__icon {
+      display: none;
+    }
+  }
 }
+
 .svg-token {
   display: flex;
   @include wh(16px);
@@ -59,6 +83,9 @@
 }
 
 .header-tokens {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   &__title {
     font-size: 14px;
     font-weight: 500;
@@ -69,7 +96,7 @@
     font-weight: 700;
     line-height: 130%;
   }
-  &__desc {
+  &__text {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -89,15 +116,44 @@
     background-position: center;
     background-size: contain;
   }
+  @media screen and (max-width: $breakpoint-mobile) {
+    &__icon {
+      display: none;
+    }
+  }
 }
 
 .header-btn-hamburger {
+  display: none;
+  @media screen and (max-width: $breakpoint-mobile) {
+    @include flexcc;
+    width: 48px;
+    height: 44px;
+    background-image: url(../img/hamburger-full.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    filter: drop-shadow(0px 4px 0px #2153cb);
+    border-radius: 8px;
+  }
+}
+.btn-blue {
+  font-size: 16px;
+  color: #fff;
   @include flexcc;
-  width: 48px;
-  height: 44px;
-  background-image: url(../img/hamburger-full.svg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  filter: drop-shadow(0px 4px 0px #2153cb);
-  border-radius: 8px;
+  font-weight: 700;
+  line-height: 130%;
+  width: 228px;
+  height: 66px;
+  flex: none;
+  background: url(../img/btn-blue.svg) top center no-repeat;
+  // @include tr;
+  &:hover {
+    background: url(../img/btn-blue-hover.svg) top center no-repeat;
+  }
+  &:active {
+    background: url(../img/btn-blue-click.svg) top center no-repeat;
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }

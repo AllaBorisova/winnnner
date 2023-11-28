@@ -1,14 +1,43 @@
 .tournament {
+  &-inner {
+    @media screen and (min-width: $breakpoint-mobile) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 33px;
+      padding-right: 128px;
+      padding-top: 34px;
+      padding-top: 22px;
+      padding-bottom: 33px;
+      background: url(../img/bg-prize-desktop.png) top center no-repeat;
+      border-radius: 16px;
+      align-items: center;
+      margin-top: 22px;
+    }
+  }
+}
+.tournament-time {
   margin-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  @media screen and (min-width: $breakpoint-mobile) {
+    margin-top: 0px;
+  }
   &__till-the-end {
     color: rgba(24, 28, 39, 0.5);
     font-size: 14px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
+    @media screen and (min-width: $breakpoint-mobile) {
+      color: #181c27;
+
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+      text-align: center;
+    }
   }
 }
 .tournament-timer {
@@ -23,16 +52,29 @@
     gap: 4px;
     flex-wrap: wrap;
     max-width: 100px;
+    max-width: 104px;
   }
   &__count {
     @include flexcc;
-    @include wh(48px);
+
     font-size: 32px;
     font-weight: 700;
-    background-image: url(../img/bg-count.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      @include wh(48px);
+      background-image: url(../img/bg-count.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    @media screen and (min-width: $breakpoint-mobile) {
+      font-size: 24px;
+      .icon {
+        width: auto;
+        height: auto;
+        background: none;
+      }
+    }
   }
   &__text {
     width: 100%;
@@ -40,6 +82,10 @@
     font-size: 12px;
     font-weight: 500;
     line-height: 140%;
+    color: rgba(24, 28, 39, 0.5);
+    @media screen and (min-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
   &__divider {
     display: flex;
@@ -66,11 +112,32 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
+  @media screen and (min-width: $breakpoint-mobile) {
+    align-items: flex-start;
+    background: none;
+    aspect-ratio: auto;
+  }
   &__title {
     color: rgba(24, 28, 39, 0.5);
     font-size: 14px;
     font-weight: 500;
     line-height: 140%;
+    @media screen and (min-width: $breakpoint-mobile) {
+      color: #181c27;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+  }
+  &__subtitle {
+    display: none;
+    @media screen and (min-width: $breakpoint-mobile) {
+      font-size: 16px;
+      color: rgba(24, 28, 39, 0.5);
+      display: block;
+      font-weight: 500;
+      line-height: 140%;
+    }
   }
   &__text {
     font-size: 32px;
@@ -79,5 +146,13 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    @media screen and (min-width: $breakpoint-mobile) {
+      font-size: 48px;
+      font-weight: 600;
+      .svg-token {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }

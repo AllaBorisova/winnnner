@@ -8,11 +8,22 @@
   column-gap: 14px;
   row-gap: 11px;
   aspect-ratio: 343/160;
+  @media screen and (min-width: $breakpoint-mobile) {
+    background: url(../img/bg-statistic-desktop.png) center top no-repeat;
+    display: flex;
+    justify-content: space-between;
+    aspect-ratio: auto;
+    gap: 35px;
+    padding: 32px;
+  }
 
   &-info {
     display: flex;
     align-items: center;
     gap: 12px;
+    @media screen and (min-width: $breakpoint-mobile) {
+      gap: 16px;
+    }
     &__icon {
       flex: none;
     }
@@ -28,11 +39,17 @@
       font-weight: 500;
       line-height: 140%;
       color: rgba(24, 28, 39, 0.5);
+      @media screen and (min-width: $breakpoint-mobile) {
+        font-size: 14px;
+      }
     }
     &__value {
       font-size: 18px;
       font-weight: 500;
       line-height: 140%;
+      @media screen and (min-width: $breakpoint-mobile) {
+        font-weight: 600;
+      }
     }
   }
 }
