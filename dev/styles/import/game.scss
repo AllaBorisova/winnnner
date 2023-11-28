@@ -8,6 +8,7 @@
   border-radius: 16px;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-game.jpg) center no-repeat;
+    background-size: cover;
     padding-bottom: 24px;
     min-height: 424px;
     margin-top: 20px;
