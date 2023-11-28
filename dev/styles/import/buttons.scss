@@ -34,7 +34,7 @@
   }
 
   &-left {
-    background: url(../img/btn-left.svg) left center no-repeat;
+    background: url(../img/btn-left.svg) left top no-repeat;
     height: 58px;
     width: 185px;
     gap: 20px;
@@ -45,7 +45,7 @@
     background-size: contain;
     @include tr;
     @media screen and (min-width: $breakpoint-mobile) {
-      background: url(../img/btn-left-desktop.svg) left center no-repeat;
+      background-image: url(../img/btn-left-desktop.svg);
       height: 64px;
       height: 66px;
       flex-direction: row;
@@ -57,12 +57,12 @@
         height: auto;
       }
       &:hover {
-        background: url(../img/btn-left-desktop-hover.svg) left center no-repeat;
+        background-image: url(../img/btn-left-desktop-hover.svg);
       }
     }
   }
   &-right {
-    background: url(../img/btn-right.svg) right center no-repeat;
+    background: url(../img/btn-right.svg) right top no-repeat;
     height: 58px;
     width: 185px;
     gap: 20px;
@@ -75,7 +75,7 @@
     background-size: contain;
     // @include tr;
     @media screen and (min-width: $breakpoint-mobile) {
-      background: url(../img/btn-right-desktop.svg) left center no-repeat;
+      background-image: url(../img/btn-right-desktop.svg);
       height: 64px;
       height: 66px;
       flex-direction: row;
@@ -87,12 +87,10 @@
         height: auto;
       }
       &:hover {
-        background: url(../img/btn-right-desktop-hover.svg) left center
-          no-repeat;
+        background-image: url(../img/btn-right-desktop-hover.svg);
       }
       &:active {
-        background: url(../img/btn-right-desktop-active.svg) left center
-          no-repeat;
+        background-image: url(../img/btn-right-desktop-active.svg);
         color: #fff;
       }
     }
