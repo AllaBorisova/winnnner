@@ -3,15 +3,26 @@ aside.sidebar
 	include ./components/logo/logo.pug
 	.sidebar__buttons 
 		button.icon.icon_reward()
+			span 
 		button.icon.icon_evaluation()
+			span
 		button.icon.icon_wallet()
+			span 
 		button.icon.icon_flag()
+			span 
 		button.icon.icon_dumbbell()
+			span 
 		button.icon.icon_coins()
+			span 
 		button.icon.icon_info()
+			span 
 	.sidebar__themes 
-		button.btn-icon.icon-light-theme()
-		button.btn-icon.icon-dark-theme()
+		.sidebar__themes-inner
+			button.icon-theme.icon-theme_light.active()
+				span 
+			button.icon-theme.icon-theme_dark()
+				span
 	.sidebar__logout 
 		button.icon.icon_logout()
+			span
 	

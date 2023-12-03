@@ -1,43 +1,160 @@
 .icon {
   @include wh(38px);
-  background: url(../img/btn-light.svg) center no-repeat;
-  background-size: contain;
+  // background: url(../img/btn-light.svg) center no-repeat;
+  // background-size: contain;
+  background: #a4c0d2;
+  border-radius: 8px;
+  padding: 0;
   @include flexcc;
   line-height: 0;
+  span {
+    background: #dee5ee;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(-2px, -3px, 0);
+    position: relative;
+    @include flexcc;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 16px;
+      background: url(../img/light4.svg) left top no-repeat;
+      left: 3px;
+      top: 3px;
+      position: absolute;
+      z-index: 3;
+    }
+  }
+
   @media screen and (min-width: $breakpoint-mobile) {
     @include wh(50px);
   }
-  &_rating:before {
+  &_rating span:before {
     content: url(../img/icon-rating.png);
+    @include tr;
   }
-  &_rules:before {
+  &_rules span:before {
     content: url(../img/icon-rules.png);
+    @include tr;
   }
-  &_wallet:before {
+  &_wallet span:before {
     content: url(../img/icon-wallet.png);
+    @include tr;
   }
-  &_reward:before {
+  &_reward span:before {
     content: url(../img/icon-reward.png);
+    @include tr;
   }
-  &_evaluation:before {
+  &_evaluation span:before {
     content: url(../img/icon-evaluation.png);
+    @include tr;
   }
-  &_flag:before {
+  &_flag span:before {
     content: url(../img/icon-flag.png);
+    @include tr;
   }
-  &_dumbbell:before {
+  &_dumbbell span:before {
     content: url(../img/icon-dumbbell.png);
+    @include tr;
   }
-  &_coins:before {
+  &_coins span:before {
     content: url(../img/icon-coins.png);
+    @include tr;
   }
-  &_info:before {
+  &_info span:before {
     content: url(../img/icon-info.png);
+    @include tr;
   }
-  &_logout:before {
+  &_logout span:before {
     content: url(../img/icon-logout.svg);
+    @include tr;
   }
-  &_tokens:before {
+  &_tokens span:before {
     content: url(../img/icon-tokens.png);
+    @include tr;
+  }
+  &_medal span:before {
+    content: url(../img/icon-medal.png);
+    @include tr;
+  }
+  &_timer span:before {
+    content: url(../img/icon-timer.png);
+    @include tr;
+  }
+  &_online span:before {
+    content: url(../img/icon-online.png);
+    @include tr;
+  }
+}
+
+.icon-theme {
+  @include wh(42px);
+  border-radius: 8px;
+  padding: 2px;
+  // background: linear-gradient(to bottom, #d6e0e6, #d6e1e8 0%, #f4fbff);
+  background: linear-gradient(to bottom, #e1e9f1, #dee5ee, #dae2ea);
+
+  span {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background: #dee5ee;
+    @include flexcc;
+  }
+
+  &_light span:before {
+    content: url(../img/icon-light-theme.png);
+    @include tr;
+  }
+  &_dark span:before {
+    content: url(../img/icon-dark-theme.png);
+    @include tr;
+  }
+  &.active {
+    background: linear-gradient(to right, #8fa0f4, #527df6, #306bfd);
+    span {
+      background: #2b69ff;
+    }
+  }
+}
+
+.icon-timer {
+  @include wh(48px);
+  // background: #a4c0d2;
+  background: linear-gradient(to bottom, #f5f7fb, #f1f3f7, #e7ebf1);
+  border-radius: 12px;
+  padding: 0;
+  @include flexcc;
+  padding: 2px;
+  line-height: 0;
+  span {
+    background: #f2f3f7;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    // transform: translate3d(-2px, -3px, 0);
+    position: relative;
+    @include flexcc;
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 16px;
+      background: url(../img/light5.svg) left top no-repeat;
+      left: 3px;
+      top: 3px;
+      position: absolute;
+      z-index: 3;
+    }
+  }
+  @media screen and (min-width: $breakpoint-mobile) {
+    @include wh(50px);
+    border-radius: 8px;
+    box-shadow: 0px 4px 0px 0px #b9c8dc;
+    span {
+      border-radius: 8px;
+    }
   }
 }

@@ -13,28 +13,71 @@
   &-training {
     width: 185px;
     height: 58px;
-    background: url(../img/btn-training.svg) left center no-repeat;
-    background-size: contain;
+    // background: url(../img/btn-training.svg) left center no-repeat;
+    background: url(../img/btn-training-mobile.svg) left top no-repeat;
+    // background-size: cover;
     font-size: 18px;
     font-weight: 700;
     color: #415868;
     padding-left: 30px;
+    @include tr;
+    &:active {
+      background-image: url(../img/btn-training-mobile-active.svg);
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+    @media screen and (min-width: $breakpoint-mobile) {
+      height: 60px;
+      background: url(../img/btn-training-desktop.svg) left top no-repeat;
+      &:hover {
+        background-image: url(../img/btn-training-desktop-hover.svg);
+      }
+      &:active {
+        background-image: url(../img/btn-training-desktop-active.svg);
+      }
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
   }
   &-start {
-    width: 185px;
+    width: 190px;
     height: 58px;
-    background: url(../img/btn-start.svg) left center no-repeat;
+    background: url(../img/btn-start-mobile.svg) left top no-repeat;
     margin-left: -27px;
-    background-size: contain;
+    // background-size: cover;
     font-size: 18px;
     font-weight: 700;
     color: #415868;
     justify-content: flex-end;
     padding-right: 57px;
+    @include tr;
+
+    &:active {
+      background-image: url(../img/btn-start-mobile-active.svg);
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+    @media screen and (min-width: $breakpoint-mobile) {
+      height: 60px;
+      background: url(../img/btn-start-desktop.svg) left top no-repeat;
+      &:hover {
+        background-image: url(../img/btn-start-desktop-hover.svg);
+      }
+      &:active {
+        background-image: url(../img/btn-start-desktop-active.svg);
+      }
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
   }
 
   &-left {
-    background: url(../img/btn-left.svg) left top no-repeat;
+    background: url(../img/btn-left-mobile.svg) left top no-repeat;
+    background-size: cover;
     height: 58px;
     width: 185px;
     gap: 20px;
@@ -44,9 +87,13 @@
     padding-left: 10px;
     background-size: contain;
     @include tr;
+    &:active {
+      background-image: url(../img/btn-left-mobile-active.svg);
+      color: #fff;
+    }
     @media screen and (min-width: $breakpoint-mobile) {
-      background-image: url(../img/btn-left-desktop.svg);
-      height: 64px;
+      background: url(../img/btn-left-desktop.png) top left no-repeat;
+      background-size: contain;
       height: 66px;
       flex-direction: row;
       gap: 8px;
@@ -55,14 +102,25 @@
         background: none;
         width: auto;
         height: auto;
+        span {
+          background: none;
+          &:after {
+            display: none;
+          }
+        }
       }
-      &:hover {
-        background-image: url(../img/btn-left-desktop-hover.svg);
+      // &:hover {
+      //   background-image: url(../img/btn-left-desktop-hover.svg);
+      // }
+      &:active {
+        // background-image: url(../img/btn-left-desktop-active.svg);
+        background-image: url(../img/btn-left-desktop-active.png);
+        color: #fff;
       }
     }
   }
   &-right {
-    background: url(../img/btn-right.svg) right top no-repeat;
+    background: url(../img/btn-right-mobile.svg) right top no-repeat;
     height: 58px;
     width: 185px;
     gap: 20px;
@@ -73,9 +131,15 @@
     padding-right: 10px;
     margin-left: -27px;
     background-size: contain;
+    &:active {
+      background-image: url(../img/btn-right-mobile-active.svg);
+      color: #fff;
+    }
     // @include tr;
     @media screen and (min-width: $breakpoint-mobile) {
-      background-image: url(../img/btn-right-desktop.svg);
+      // background-image: url(../img/btn-right-desktop.svg);
+      background-image: url(../img/btn-right-desktop.png);
+      background-size: contain;
       height: 64px;
       height: 66px;
       flex-direction: row;
@@ -85,14 +149,133 @@
         background: none;
         width: auto;
         height: auto;
+        span {
+          background: none;
+          &:after {
+            display: none;
+          }
+        }
       }
-      &:hover {
-        background-image: url(../img/btn-right-desktop-hover.svg);
-      }
+      // &:hover {
+      //   background-image: url(../img/btn-right-desktop-hover.svg);
+      // }
       &:active {
-        background-image: url(../img/btn-right-desktop-active.svg);
+        // background-image: url(../img/btn-right-desktop-active.svg);
+        // background-image: url(../img/btn-right-desktop-active.svg);
+        background-image: url(../img/btn-right-desktop-active.png);
         color: #fff;
       }
+    }
+  }
+  &-blue {
+    width: 228px;
+    height: 64px;
+    flex: none;
+    @include tr;
+    border-radius: 8px;
+    background: #2153cb;
+
+    .gradient {
+      background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
+      transform: translate3d(0px, -4px, 0);
+      width: 100%;
+      height: 62px;
+      padding: 2px;
+      border-radius: 8px;
+      @include tr;
+      position: relative;
+      &:before {
+        content: '';
+        width: 51px;
+        height: 13px;
+        background: url(../img/light1.svg) left top no-repeat;
+        position: absolute;
+        z-index: 3;
+        top: 6px;
+        left: 6px;
+      }
+      &:after {
+        content: '';
+        width: 21px;
+        height: 6px;
+        background: url(../img/light2.svg) left top no-repeat;
+
+        position: absolute;
+        z-index: 3;
+        top: 6px;
+        left: 73px;
+      }
+
+      span {
+        font-size: 16px;
+        color: #fff;
+        @include flexcc;
+        font-weight: 700;
+        line-height: 130%;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: $color-primary;
+        position: relative;
+        &:before {
+          content: '';
+          width: 10px;
+          height: 6px;
+          background: url(../img/light3.svg) left top no-repeat;
+          position: absolute;
+          z-index: 3;
+          top: 4px;
+          left: 96px;
+        }
+      }
+    }
+    &:hover {
+      .gradient {
+        transform: translate3d(0px, -6px, 0);
+      }
+      // background: url(../img/btn-blue-hover.svg) top center no-repeat;
+      // background: $color-primary;
+      // box-shadow: 0px 6px 0px 0px #2153cb;
+    }
+    &:active,
+    .active {
+      background: $color-primary;
+      box-shadow: 0px 4px 0px 0px #2153cb;
+    }
+    &.disabled {
+      opacity: 0.4;
+    }
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+  &-plus {
+    @include wh(16px);
+    position: relative;
+    @include tr;
+    border-radius: 50%;
+    @include flexcc;
+    background: #2153cb;
+    .gradient {
+      @include wh(16px);
+      @include flexcc;
+      padding: 2px;
+      // background: linear-gradient(to bottom, #53557a, #8890dd 0%, #b5b8f7);
+      background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
+      border-radius: 50%;
+      transform: translate3d(-2px, -2px, 0);
+      @include tr;
+      svg {
+        @include wh(12px);
+        background: $color-primary;
+        border-radius: 50%;
+      }
+    }
+    &:hover .gradient {
+      transform: translate3d(-3px, -3px, 0);
+    }
+    &.disabled {
+      opacity: 0.4;
     }
   }
 }

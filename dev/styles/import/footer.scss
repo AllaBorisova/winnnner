@@ -11,8 +11,7 @@
       align-items: center;
       justify-content: space-between;
     }
-    &__copyright {
-    }
+
     &__menu {
       @include ul-clean;
       display: flex;

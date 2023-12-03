@@ -1,64 +1,66 @@
-//toggle
-const jobItems = document.querySelectorAll('.job-header');
+// JavaScript Document
+function preloadImagesFromDirectory(dir) {
+  if (!dir) return;
+  function getJSON(URL, success) {
+    // Create new function (within global namespace) (With unique name):
+    var uniqueID = 'json' + +new Date();
+    window[uniqueID] = function (data) {
+      success && success(data);
+    };
 
-jobItems.forEach((element) => {
-  element.onclick = () => {
-    element.closest('.job__item').classList.toggle('active');
-  };
-});
-
-//tabs
-const theTabs = document.querySelectorAll('.job-tabs > ul > li');
-
-function theTabClicks(tabClickEvent) {
-  const clickedTab = tabClickEvent.currentTarget;
-  const tabParent =
-    tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
-  const theTabs = tabParent.querySelectorAll('.job-tabs > ul > li');
-  for (let i = 0; i < theTabs.length; i++) {
-    theTabs[i].classList.remove('active');
+    // Append new SCRIPT element to DOM:
+    document.getElementsByTagName('body')[0].appendChild(
+      (function () {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = URL.replace('callback=?', 'callback=' + uniqueID);
+        return script;
+      })()
+    );
   }
 
-  clickedTab.classList.add('active');
-  tabClickEvent.preventDefault();
-  const contentPanes = tabParent.querySelectorAll('.job-tabs__text');
-  for (let i = 0; i < contentPanes.length; i++) {
-    contentPanes[i].classList.remove('active');
+  function preload(srcArray) {
+    for (var i = 0; i < srcArray.length; i++) {
+      new Image().src = srcArray[i];
+    }
   }
-  const anchorReference = tabClickEvent.target;
-  const activePaneId = anchorReference.getAttribute('href');
-  const activePane = tabParent.querySelector(activePaneId);
-  activePane.classList.add('active');
+
+  // Get that JSON data:
+  getJSON(
+    'scanImageDirectory.json.php?directory=' +
+      encodeURIComponent(dir) +
+      '&callback=?',
+    function (data) {
+      return data.images ? preload(data.images) : false;
+    }
+  );
 }
-for (let i = 0; i < theTabs.length; i++) {
-  theTabs[i].addEventListener('click', theTabClicks);
+
+window.onload = function () {
+  preloadImagesFromDirectory('img/');
+};
+
+//timer
+function updateClock() {
+  const currentTime = new Date();
+  const hours = currentTime.getHours().toString().padStart(2, '0').toString();
+  const minutes = currentTime
+    .getMinutes()
+    .toString()
+    .padStart(2, '0')
+    .toString();
+  const seconds = currentTime
+    .getSeconds()
+    .toString()
+    .padStart(2, '0')
+    .toString();
+
+  document.getElementById('hours-first').textContent = hours[0];
+  document.getElementById('hours-second').textContent = hours[1];
+  document.getElementById('minutes-first').textContent = minutes[0];
+  document.getElementById('minutes-second').textContent = minutes[1];
+  document.getElementById('seconds-first').textContent = seconds[0];
+  document.getElementById('seconds-second').textContent = seconds[1];
 }
 
-// function Tabs() {
-//   const bindAll = function () {
-//     const menuElements = document.querySelectorAll('[data-tab]');
-//     for (const i = 0; i < menuElements.length; i++) {
-//       menuElements[i].addEventListener('click', change, false);
-//     }
-//   };
-
-//   const clear = function () {
-//     const menuElements = document.querySelectorAll('[data-tab]');
-//     for (const i = 0; i < menuElements.length; i++) {
-//       menuElements[i].classList.remove('active');
-//       const id = menuElements[i].getAttribute('data-tab');
-//       document.getElementById(id).classList.remove('active');
-//     }
-//   };
-
-//   const change = function (e) {
-//     clear();
-//     e.target.classList.add('active');
-//     const id = e.currentTarget.getAttribute('data-tab');
-//     document.getElementById(id).classList.add('active');
-//   };
-
-//   bindAll();
-// }
-
-// const connectTabs = new Tabs();
+setInterval(updateClock, 1000);

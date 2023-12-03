@@ -11,6 +11,8 @@ const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 const svgSprite = require('gulp-svg-sprite');
 const imagemin = require('gulp-imagemin');
+const changed = require('gulp-changed');
+const webp = require('gulp-webp');
 
 const cleanBuild = () => {
   return gulp
@@ -79,6 +81,7 @@ const server = () => {
 const images = () => {
   return gulp
     .src('./dev/img/*')
+    .pipe(changed('./build/img'))
     .pipe(
       imagemin({
         verbose: true,

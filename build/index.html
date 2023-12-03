@@ -16,20 +16,22 @@
             <use xlink:href="./img/sprite.svg#logo"></use>
           </svg></a>
         <div class="sidebar__buttons"> 
-          <button class="icon icon_reward"></button>
-          <button class="icon icon_evaluation"></button>
-          <button class="icon icon_wallet"></button>
-          <button class="icon icon_flag"></button>
-          <button class="icon icon_dumbbell"></button>
-          <button class="icon icon_coins"></button>
-          <button class="icon icon_info"></button>
+          <button class="icon icon_reward"><span> </span></button>
+          <button class="icon icon_evaluation"><span></span></button>
+          <button class="icon icon_wallet"><span> </span></button>
+          <button class="icon icon_flag"><span> </span></button>
+          <button class="icon icon_dumbbell"><span> </span></button>
+          <button class="icon icon_coins"><span> </span></button>
+          <button class="icon icon_info"><span> </span></button>
         </div>
         <div class="sidebar__themes"> 
-          <button class="btn-icon icon-light-theme"></button>
-          <button class="btn-icon icon-dark-theme"></button>
+          <div class="sidebar__themes-inner">
+            <button class="icon-theme icon-theme_light active"><span> </span></button>
+            <button class="icon-theme icon-theme_dark"><span></span></button>
+          </div>
         </div>
         <div class="sidebar__logout"> 
-          <button class="icon icon_logout"></button>
+          <button class="icon icon_logout"><span></span></button>
         </div>
       </aside>
       <div class="page__column">
@@ -45,7 +47,7 @@
                     <div class="header__title">Мой баланс:</div>
                     <div class="header-wallet">
                       <div class="header-wallet__icon"> 
-                        <div class="icon icon_wallet"></div>
+                        <div class="icon icon_wallet"><span></span></div>
                       </div>
                       <div class="header-wallet__text">
                         <div class="header-wallet__title">Мой кошелек</div>
@@ -57,14 +59,24 @@
                     </div>
                     <div class="header-tokens">
                       <div class="header-tokens__icon">
-                        <div class="icon icon_tokens"></div>
+                        <div class="icon icon_tokens"><span></span></div>
                       </div>
                       <div class="header-tokens__desc">
                         <div class="header-tokens__title">Мои жетоны</div>
-                        <div class="header-tokens__text"><span class="header-tokens__value">400</span><span class="header-tokens__plus"></span><span class="header-tokens__question"></span></div>
+                        <div class="header-tokens__text"><span class="header-tokens__value">400</span>
+                          <button class="btn btn-plus header-tokens__plus"><span class="gradient">
+                              <svg>
+                                <use xlink:href="./img/sprite.svg#plus"></use>
+                              </svg></span></button>
+                          <button class="btn header-tokens__question">
+                            <svg>
+                              <use xlink:href="./img/sprite.svg#question"></use>
+                            </svg>
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <button class="btn btn-blue">Пополнить жетоны</button>
+                    <button class="btn btn-blue"> <span class="gradient"> <span>Пополнить жетоны</span></span></button>
                     <button class="header-btn-hamburger"></button>
                   </div>
                 </header>
@@ -74,20 +86,20 @@
                       <div class="tournament-time__till-the-end">До конца турнира</div>
                       <div class="tournament-timer"> 
                         <div class="tournament-timer__couple"> 
-                          <div class="tournament-timer__count icon">0</div>
-                          <div class="tournament-timer__count icon">9</div>
+                          <div class="tournament-timer__count icon-timer"><span id="hours-first">0</span></div>
+                          <div class="tournament-timer__count icon-timer"><span id="hours-second">9</span></div>
                           <div class="tournament-timer__text">Часов</div>
                         </div>
                         <div class="tournament-timer__divider"><span> </span><span></span></div>
                         <div class="tournament-timer__couple">
-                          <div class="tournament-timer__count icon">3</div>
-                          <div class="tournament-timer__count icon">4</div>
+                          <div class="tournament-timer__count icon-timer"><span id="minutes-first">3</span></div>
+                          <div class="tournament-timer__count icon-timer"><span id="minutes-second">4</span></div>
                           <div class="tournament-timer__text">Минут</div>
                         </div>
                         <div class="tournament-timer__divider"><span> </span><span></span></div>
                         <div class="tournament-timer__couple">
-                          <div class="tournament-timer__count icon">5</div>
-                          <div class="tournament-timer__count icon">1</div>
+                          <div class="tournament-timer__count icon-timer"><span id="seconds-first">5</span></div>
+                          <div class="tournament-timer__count icon-timer"><span id="seconds-second">1</span></div>
                           <div class="tournament-timer__text">Секунд</div>
                         </div>
                       </div>
@@ -107,28 +119,28 @@
                 </div>
                 <div class="statistics"> 
                   <div class="statistics-info"> 
-                    <div class="statistics-info__icon icon"><img src="./img/icon-reward.png" alt=""></div>
+                    <div class="statistics-info__icon icon icon_reward"><span></span></div>
                     <div class="statistics-info__desc"> 
                       <div class="statistics-info__name">Моя награда</div>
                       <div class="statistics-info__value">6 000 W</div>
                     </div>
                   </div>
                   <div class="statistics-info"> 
-                    <div class="statistics-info__icon icon"><img src="./img/icon-medal.png" alt=""></div>
+                    <div class="statistics-info__icon icon icon_medal"><span></span></div>
                     <div class="statistics-info__desc"> 
                       <div class="statistics-info__name">Мое место</div>
                       <div class="statistics-info__value">7 </div>
                     </div>
                   </div>
                   <div class="statistics-info"> 
-                    <div class="statistics-info__icon icon"><img src="./img/icon-timer.png" alt=""></div>
+                    <div class="statistics-info__icon icon icon_timer"><span></span></div>
                     <div class="statistics-info__desc"> 
                       <div class="statistics-info__name">Мое время</div>
                       <div class="statistics-info__value">01:54:12</div>
                     </div>
                   </div>
                   <div class="statistics-info"> 
-                    <div class="statistics-info__icon icon"><img src="./img/icon-online.png" alt=""></div>
+                    <div class="statistics-info__icon icon icon_online"><span></span></div>
                     <div class="statistics-info__desc"> 
                       <div class="statistics-info__name">Сейчас онлайн</div>
                       <div class="statistics-info__value">12 000</div>
@@ -139,10 +151,10 @@
               <div class="two-buttons"> 
                 <div class="two-buttons__inner">
                   <button class="btn btn-left">
-                    <div class="icon icon_rating"></div>Рейтинг
+                    <div class="icon icon_evaluation"><span></span></div>Рейтинг
                   </button>
                   <button class="btn btn-right">
-                    <div class="icon icon_rules"></div>Правила
+                    <div class="icon icon_rules"><span></span></div>Правила
                   </button>
                 </div>
                 <div class="two-buttons__title">Укажите меньшее число</div>
@@ -164,6 +176,7 @@
             </ul>
           </div>
         </footer>
+        <script src="./js/main.js"></script>
       </div>
     </div>
   </body>

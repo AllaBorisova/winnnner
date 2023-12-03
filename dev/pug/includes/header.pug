@@ -5,6 +5,7 @@ header.header
 		.header-wallet
 			.header-wallet__icon 
 				.icon.icon_wallet
+					span
 			.header-wallet__text
 				.header-wallet__title Мой кошелек
 				.header-wallet__desc
@@ -14,13 +15,19 @@ header.header
 		.header-tokens
 			.header-tokens__icon
 				.icon.icon_tokens
+					span
 			.header-tokens__desc
 				.header-tokens__title Мои жетоны
 				.header-tokens__text
 					span.header-tokens__value 400
-					span.header-tokens__plus
-					span.header-tokens__question
-		button.btn.btn-blue Пополнить жетоны
+					button.btn.btn-plus.header-tokens__plus
+						span.gradient
+							+svg('plus')
+					button.btn.header-tokens__question
+						+svg('question')
+		button.btn.btn-blue 
+			span.gradient 
+				span Пополнить жетоны
 		button.header-btn-hamburger
 
 

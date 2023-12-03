@@ -12,11 +12,10 @@ html {
   background: url(../img/bg-mobile.jpg) center no-repeat;
   background-size: cover;
   @media screen and (min-width: $breakpoint-mobile) {
-    background: url(../img/bg-mobile.jpg);
+    background-image: url(../img/bg-desktop.jpg);
   }
 }
 body {
-  background: $bg-body;
   overflow-x: hidden;
   height: 100%;
   font-family: $font;
@@ -24,7 +23,9 @@ body {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 400;
-  background: url(../img/bg-mobile-lines.png) top left repeat;
+  @media screen and (max-width: $breakpoint-mobile) {
+    background: url(../img/bg-mobile-lines.png) top left repeat;
+  }
 }
 
 a {
@@ -56,10 +57,9 @@ button {
   gap: 40px;
   // max-width: calc(100% - get-vw(120px));
   max-width: 1426px;
-  padding: 0 40px;
-  padding-top: 32px;
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding: 32px 40px 30px 40px;
+
   @media screen and (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
   }
@@ -78,13 +78,3 @@ button {
     }
   }
 }
-// .container {
-//   max-width: calc(100% - get-vw(120px));
-//   margin: 0 auto;
-//   @media screen and (max-width: $breakpoint-tablet) {
-//     max-width: calc(100% - 66px);
-//   }
-//   @media screen and (max-width: $breakpoint-mobile) {
-//     max-width: calc(100% - 32px);
-//   }
-// }

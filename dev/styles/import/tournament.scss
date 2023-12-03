@@ -50,9 +50,13 @@
     align-items: center;
     justify-content: space-between;
     gap: 4px;
+
     flex-wrap: wrap;
     max-width: 100px;
     max-width: 104px;
+    @media screen and (min-width: $breakpoint-mobile) {
+      row-gap: 8px;
+    }
   }
   &__count {
     @include flexcc;

@@ -102,19 +102,20 @@
     gap: 4px;
   }
   &__plus {
-    @include wh(16px);
-    background-image: url(../img/plus.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    margin-left: 6px;
+    @media screen and (min-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
   &__question {
-    @include wh(16px);
-    background-image: url(../img/question.svg);
-    margin-left: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    @include wh(18px);
+    @media screen and (max-width: $breakpoint-mobile) {
+      margin-left: auto;
+    }
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
   @media screen and (max-width: $breakpoint-mobile) {
     &__icon {
@@ -134,26 +135,5 @@
     background-position: top center;
     filter: drop-shadow(0px 4px 0px #2153cb);
     border-radius: 8px;
-  }
-}
-.btn-blue {
-  font-size: 16px;
-  color: #fff;
-  @include flexcc;
-  font-weight: 700;
-  line-height: 130%;
-  width: 228px;
-  height: 66px;
-  flex: none;
-  background: url(../img/btn-blue.svg) top center no-repeat;
-  // @include tr;
-  &:hover {
-    background: url(../img/btn-blue-hover.svg) top center no-repeat;
-  }
-  &:active {
-    background: url(../img/btn-blue-click.svg) top center no-repeat;
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
-    display: none;
   }
 }
