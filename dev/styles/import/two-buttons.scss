@@ -6,8 +6,9 @@
   @media screen and (min-width: $breakpoint-mobile) {
     border-radius: 16px;
     background: url(../img/man.png) bottom center no-repeat #f2f3f7;
-    background-size: contain;
+    background-size: get-vw(384px);
     padding: 20px;
+    padding-bottom: 0px;
     margin-top: 0;
   }
   &__inner {
@@ -31,11 +32,22 @@
     @media screen and (min-width: $breakpoint-mobile) {
       display: block;
       p {
+        margin: 0;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 140%;
         margin-bottom: 1em;
+      }
+    }
+  }
+  &__img {
+    margin-top: auto;
+    display: none;
+    @media screen and (min-width: $breakpoint-mobile) {
+      display: block;
+      img {
+        display: block;
       }
     }
   }

@@ -60,11 +60,10 @@ button {
   margin: 0 auto;
   padding: 30px 40px 30px 40px;
   min-height: 100vh;
+  height: 100vh;
 
   @media screen and (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-  }
-  @media screen and (max-width: $breakpoint-mobile) {
     max-width: calc(100% - 32px);
     padding: 0;
     padding-top: 16px;
@@ -79,5 +78,20 @@ button {
     @media screen and (max-width: $breakpoint-mobile) {
       gap: 16px;
     }
+  }
+}
+.main {
+  flex: 1;
+  // &__columns {
+  @media screen and (min-width: $breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: auto 384px;
+    gap: 32px;
+  }
+  // }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
