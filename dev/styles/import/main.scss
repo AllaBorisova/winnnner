@@ -7,11 +7,17 @@
   }
 }
 .main {
-  &__columns {
-    @media screen and (min-width: $breakpoint-mobile) {
-      display: grid;
-      grid-template-columns: auto 384px;
-      gap: 31px;
-    }
+  flex: 1;
+  // &__columns {
+  @media screen and (min-width: $breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: auto 384px;
+    gap: 32px;
+  }
+  // }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }

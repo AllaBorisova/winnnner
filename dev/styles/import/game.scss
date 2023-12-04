@@ -4,14 +4,16 @@
   align-items: flex-end;
   background: url(../img/bg-game-mobile.jpg) center no-repeat;
   background-size: cover;
-  margin-top: 16px;
+  // margin-top: 16px;
   border-radius: 16px;
+  flex: 1;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-game.jpg) center no-repeat;
     background-size: cover;
     padding-bottom: 24px;
     min-height: 424px;
-    margin-top: 20px;
+    min-height: 200px;
+    // margin-top: 20px;
   }
   &__buttons {
     display: flex;

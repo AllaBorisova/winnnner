@@ -58,7 +58,8 @@ button {
   // max-width: calc(100% - get-vw(120px));
   max-width: 1426px;
   margin: 0 auto;
-  padding: 32px 40px 30px 40px;
+  padding: 30px 40px 30px 40px;
+  min-height: 100vh;
 
   @media screen and (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
@@ -73,6 +74,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    min-height: calc(100vh - 60px);
+    justify-content: space-between;
     @media screen and (max-width: $breakpoint-mobile) {
       gap: 16px;
     }
