@@ -1,7 +1,7 @@
 .footer {
   display: none;
   @media screen and (min-width: $breakpoint-mobile) {
-    font-size: 14px;
+    font-size: get-vw(14px);
     font-weight: 500;
     color: rgba(24, 28, 39, 0.5);
     line-height: 140%;
@@ -15,7 +15,7 @@
     &__menu {
       @include ul-clean;
       display: flex;
-      gap: 32px;
+      gap: get-vw(32px);
     }
   }
 }

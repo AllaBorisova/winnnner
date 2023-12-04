@@ -12,10 +12,10 @@
   align-items: center;
 }
 
-@mixin wh($size) {
-  width: $size;
-  height: $size;
-}
+// @mixin wh($size) {
+//   width: $size;
+//   height: $size;
+// }
 @mixin filter-to-white {
   filter: brightness(0) invert(1);
 }

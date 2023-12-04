@@ -11,16 +11,15 @@
   padding: 0;
   margin: 0;
   &-training {
-    width: 185px;
-    height: 58px;
-    // background: url(../img/btn-training.svg) left center no-repeat;
+    width: get-vw(185px);
+    height: get-vw(58px);
     background: url(../img/btn-training-mobile.svg) left top no-repeat;
-    // background-size: cover;
+    background-size: cover;
     // clip-path: path("M1 12C1 5.92487 5.92487 1 12 1H162.378C171.2 1 176.433 10.8646 171.485 18.169L148.454 52.169C146.408 55.1903 142.996 57 139.347 57H12C5.92487 57 1 52.0751 1 46V12Z");
-    font-size: 18px;
+    font-size: get-vw(18px);
     font-weight: 700;
     color: #415868;
-    padding-left: 30px;
+    padding-left: get-vw(30px);
     @include tr;
     &:active {
       background-image: url(../img/btn-training-mobile-active.svg);
@@ -29,8 +28,8 @@
       opacity: 0.4;
     }
     @media screen and (min-width: $breakpoint-mobile) {
-      height: 60px;
-      background: url(../img/btn-training-desktop.svg) left top no-repeat;
+      height: get-vw(60px);
+      background-image: url(../img/btn-training-desktop.svg);
       &:hover {
         background-image: url(../img/btn-training-desktop-hover.svg);
       }
@@ -43,16 +42,16 @@
     }
   }
   &-start {
-    width: 190px;
-    height: 58px;
-    background: url(../img/btn-start-mobile.svg) left top no-repeat;
-    margin-left: -27px;
-    // background-size: cover;
-    font-size: 18px;
+    width: get-vw(190px);
+    height: get-vw(58px);
+    background: url(../img/btn-start-mobile.svg) right top no-repeat;
+    margin-left: get-vw(-27px);
+    background-size: cover;
+    font-size: get-vw(18px);
     font-weight: 700;
     color: #415868;
     justify-content: flex-end;
-    padding-right: 57px;
+    padding-right: get-vw(57px);
     @include tr;
 
     &:active {
@@ -62,8 +61,8 @@
       opacity: 0.4;
     }
     @media screen and (min-width: $breakpoint-mobile) {
-      height: 60px;
-      background: url(../img/btn-start-desktop.svg) left top no-repeat;
+      height: get-vw(60px);
+      background-image: url(../img/btn-start-desktop.svg);
       &:hover {
         background-image: url(../img/btn-start-desktop-hover.svg);
       }
@@ -79,13 +78,13 @@
   &-left {
     background: url(../img/btn-left-mobile.svg) left top no-repeat;
     background-size: cover;
-    height: 58px;
-    width: 185px;
-    gap: 20px;
-    font-size: 16px;
+    height: get-vw(58px);
+    width: get-vw(185px);
+    gap: get-vw(20px);
+    font-size: get-vw(16px);
     color: #13265a;
     font-weight: 500;
-    padding-left: 10px;
+    padding-left: get-vw(10px);
     background-size: contain;
     @include tr;
     &:active {
@@ -93,12 +92,12 @@
       color: #fff;
     }
     @media screen and (min-width: $breakpoint-mobile) {
-      background: url(../img/btn-left-desktop.png) top left no-repeat;
-      background-size: contain;
-      height: 66px;
+      background-image: url(../img/btn-left-desktop.png);
+      // background-size: contain;
+      height: get-vw(66px);
       flex-direction: row;
-      gap: 8px;
-      padding-left: 32px;
+      gap: get-vw(8px);
+      padding-left: get-vw(32px);
       .icon {
         background: none;
         width: auto;
@@ -110,11 +109,7 @@
           }
         }
       }
-      // &:hover {
-      //   background-image: url(../img/btn-left-desktop-hover.svg);
-      // }
       &:active {
-        // background-image: url(../img/btn-left-desktop-active.svg);
         background-image: url(../img/btn-left-desktop-active.png);
         color: #fff;
       }
@@ -122,30 +117,29 @@
   }
   &-right {
     background: url(../img/btn-right-mobile.svg) right top no-repeat;
-    height: 58px;
-    width: 185px;
-    gap: 20px;
-    font-size: 16px;
+    height: get-vw(58px);
+    width: get-vw(185px);
+    gap: get-vw(20px);
+    font-size: get-vw(16px);
     color: #13265a;
     font-weight: 500;
     flex-direction: row-reverse;
-    padding-right: 10px;
-    margin-left: -27px;
+    padding-right: get-vw(10px);
+    margin-left: get-vw(-27px);
     background-size: contain;
+    @include tr;
     &:active {
       background-image: url(../img/btn-right-mobile-active.svg);
       color: #fff;
     }
-    // @include tr;
     @media screen and (min-width: $breakpoint-mobile) {
-      // background-image: url(../img/btn-right-desktop.svg);
       background-image: url(../img/btn-right-desktop.png);
       background-size: contain;
-      height: 64px;
-      height: 66px;
+      height: get-vw(64px);
+      height: get-vw(66px);
       flex-direction: row;
-      gap: 8px;
-      padding-left: 58px;
+      gap: get-vw(8px);
+      padding-left: get-vw(58px);
       .icon {
         background: none;
         width: auto;
@@ -157,91 +151,83 @@
           }
         }
       }
-      // &:hover {
-      //   background-image: url(../img/btn-right-desktop-hover.svg);
-      // }
       &:active {
-        // background-image: url(../img/btn-right-desktop-active.svg);
-        // background-image: url(../img/btn-right-desktop-active.svg);
         background-image: url(../img/btn-right-desktop-active.png);
         color: #fff;
       }
     }
   }
   &-blue {
-    width: 228px;
-    height: 64px;
+    width: get-vw(228px);
+    height: get-vw(64px);
     flex: none;
     @include tr;
-    border-radius: 8px;
+    border-radius: get-vw(8px);
     background: #2153cb;
 
     .gradient {
       background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
-      transform: translate3d(0px, -4px, 0);
+      transform: translate3d(0px, get-vw(-4px), 0);
       width: 100%;
-      height: 62px;
-      padding: 2px;
-      border-radius: 8px;
+      height: get-vw(62px);
+      padding: get-vw(2px);
+      border-radius: get-vw(8px);
       @include tr;
       position: relative;
       &:before {
         content: '';
-        width: 51px;
-        height: 13px;
+        width: get-vw(51px);
+        height: get-vw(13px);
         background: url(../img/light1.svg) left top no-repeat;
         position: absolute;
         z-index: 3;
-        top: 6px;
-        left: 6px;
+        top: get-vw(6px);
+        left: get-vw(6px);
       }
       &:after {
         content: '';
-        width: 21px;
-        height: 6px;
+        width: get-vw(21px);
+        height: get-vw(6px);
         background: url(../img/light2.svg) left top no-repeat;
 
         position: absolute;
         z-index: 3;
-        top: 6px;
-        left: 73px;
+        top: get-vw(6px);
+        left: get-vw(73px);
       }
 
       span {
-        font-size: 16px;
+        font-size: get-vw(16px);
         color: #fff;
         @include flexcc;
         font-weight: 700;
         line-height: 130%;
         width: 100%;
         height: 100%;
-        border-radius: 8px;
+        border-radius: get-vw(8px);
         background: $color-primary;
         position: relative;
         &:before {
           content: '';
-          width: 10px;
-          height: 6px;
+          width: get-vw(10px);
+          height: get-vw(6px);
           background: url(../img/light3.svg) left top no-repeat;
           position: absolute;
           z-index: 3;
-          top: 4px;
-          left: 96px;
+          top: get-vw(4px);
+          left: get-vw(96px);
         }
       }
     }
     &:hover {
       .gradient {
-        transform: translate3d(0px, -6px, 0);
+        transform: translate3d(0px, get-vw(-6px), 0);
       }
-      // background: url(../img/btn-blue-hover.svg) top center no-repeat;
-      // background: $color-primary;
-      // box-shadow: 0px 6px 0px 0px #2153cb;
     }
     &:active,
     .active {
       background: $color-primary;
-      box-shadow: 0px 4px 0px 0px #2153cb;
+      box-shadow: 0px get-vw(4px) 0px 0px #2153cb;
     }
     &.disabled {
       opacity: 0.4;
@@ -251,29 +237,31 @@
     }
   }
   &-plus {
-    @include wh(16px);
+    width: get-vw(16px);
+    height: get-vw(16px);
     position: relative;
     @include tr;
     border-radius: 50%;
     @include flexcc;
     background: #2153cb;
     .gradient {
-      @include wh(16px);
+      width: get-vw(16px);
+      height: get-vw(16px);
       @include flexcc;
-      padding: 2px;
-      // background: linear-gradient(to bottom, #53557a, #8890dd 0%, #b5b8f7);
+      padding: get-vw(2px);
       background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
       border-radius: 50%;
-      transform: translate3d(-2px, -2px, 0);
+      transform: translate3d(get-vw(-2px), get-vw(-2px), 0);
       @include tr;
       svg {
-        @include wh(12px);
+        width: get-vw(12px);
+        height: get-vw(12px);
         background: $color-primary;
         border-radius: 50%;
       }
     }
     &:hover .gradient {
-      transform: translate3d(-3px, -3px, 0);
+      transform: translate3d(get-vw(-3px), get-vw(-3px), 0);
     }
     &.disabled {
       opacity: 0.4;

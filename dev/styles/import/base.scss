@@ -20,7 +20,7 @@ body {
   height: 100%;
   font-family: $font;
   color: $color-text;
-  font-size: 14px;
+  font-size: get-vw(14px);
   line-height: 1.3;
   font-weight: 400;
   @media screen and (max-width: $breakpoint-mobile) {
@@ -53,30 +53,30 @@ button {
 
 .page {
   display: grid;
-  grid-template-columns: 90px auto;
-  gap: 40px;
+  grid-template-columns: get-vw(90px) auto;
+  gap: get-vw(40px);
   // max-width: calc(100% - get-vw(120px));
-  max-width: 1426px;
+  max-width: get-vw(1426px);
   margin: 0 auto;
-  padding: 30px 40px 30px 40px;
+  padding: get-vw(30px) get-vw(40px) get-vw(30px) get-vw(40px);
   min-height: 100vh;
   height: 100vh;
 
   @media screen and (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-    max-width: calc(100% - 32px);
+    max-width: calc(100% - get-vw(32px));
     padding: 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: get-vw(16px);
+    padding-bottom: get-vw(16px);
   }
   &__column {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    min-height: calc(100vh - 60px);
+    gap: get-vw(32px);
+    min-height: calc(100vh - get-vw(60px));
     justify-content: space-between;
     @media screen and (max-width: $breakpoint-mobile) {
-      gap: 16px;
+      gap: get-vw(16px);
     }
   }
 }
@@ -85,13 +85,13 @@ button {
   // &__columns {
   @media screen and (min-width: $breakpoint-mobile) {
     display: grid;
-    grid-template-columns: auto 384px;
-    gap: 32px;
+    grid-template-columns: auto get-vw(384px);
+    gap: get-vw(32px);
   }
   // }
   &__column {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: get-vw(16px);
   }
 }

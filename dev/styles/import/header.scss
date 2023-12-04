@@ -4,16 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    border-radius: 12px;
+    gap: get-vw(15px);
+    border-radius: get-vw(12px);
     background: #f2f3f7;
     box-shadow: 2px 3px 0px 0px #b9c8dc;
     padding: 8px 8px 8px 12px;
 
     &:before {
       content: '';
-      width: 96px;
-      height: 25px;
+      width: get-vw(96px);
+      height: get-vw(25px);
       background: url(../img/header-glare.svg);
       background-size: contain;
       position: absolute;
@@ -26,14 +26,11 @@
     }
     @media screen and (min-width: $breakpoint-mobile) {
       border-radius: 16px;
-      padding: 25px 20px;
-      // gap: 32px;
-      // border: 2px solid #b9c4d2;
-      // background: #f2f3f7;
+      padding: get-vw(25px) get-vw(20px);
     }
   }
   &__title {
-    font-size: 24px;
+    font-size: get-vw(24px);
     font-weight: 600;
     line-height: 130%;
     @media screen and (max-width: $breakpoint-mobile) {
@@ -51,20 +48,20 @@
 .header-wallet {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: get-vw(16px);
   &__title {
-    font-size: 14px;
+    font-size: get-vw(14px);
     font-weight: 500;
     line-height: 140%;
   }
   &__desc {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: get-vw(4px);
   }
 
   &__value {
-    font-size: 18px;
+    font-size: get-vw(18px);
     font-weight: 700;
     line-height: 130%;
   }
@@ -77,7 +74,8 @@
 
 .svg-token {
   display: flex;
-  @include wh(16px);
+  width: get-vw(16px);
+  height: get-vw(16px);
   background: url(../img/token.svg);
   background-size: contain;
 }
@@ -85,14 +83,14 @@
 .header-tokens {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: get-vw(16px);
   &__title {
-    font-size: 14px;
+    font-size: get-vw(14px);
     font-weight: 500;
     line-height: 140%;
   }
   &__value {
-    font-size: 18px;
+    font-size: get-vw(18px);
     font-weight: 700;
     line-height: 130%;
   }
@@ -108,7 +106,8 @@
     }
   }
   &__question {
-    @include wh(18px);
+    width: get-vw(18px);
+    height: get-vw(18px);
     @media screen and (max-width: $breakpoint-mobile) {
       margin-left: auto;
     }
@@ -128,12 +127,12 @@
   display: none;
   @media screen and (max-width: $breakpoint-mobile) {
     @include flexcc;
-    width: 48px;
-    height: 44px;
+    width: get-vw(48px);
+    height: get-vw(44px);
     background-image: url(../img/hamburger-full.svg);
     background-repeat: no-repeat;
     background-position: top center;
     filter: drop-shadow(0px 4px 0px #2153cb);
-    border-radius: 8px;
+    border-radius: get-vw(8px);
   }
 }

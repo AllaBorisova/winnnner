@@ -1,8 +1,10 @@
 .logo {
   svg {
-    @include wh(40px);
+    width: get-vw(40px);
+    height: get-vw(40px);
     @media screen and (min-width: $breakpoint-mobile) {
-      @include wh(50px);
+      width: get-vw(50px);
+      height: get-vw(50px);
     }
   }
 }

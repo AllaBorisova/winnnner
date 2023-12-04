@@ -1,28 +1,28 @@
 .statistics {
   background: url(../img/bg-statistic.png) center top no-repeat;
   background-size: cover;
-  padding: 35px 12px 28px 12px;
+  padding: get-vw(35px) get-vw(12px) get-vw(28px) get-vw(12px);
   // margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 14px;
-  row-gap: 11px;
+  column-gap: get-vw(14px);
+  row-gap: get-vw(11px);
   aspect-ratio: 343/160;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-statistic-desktop.png) center top no-repeat;
     display: flex;
     justify-content: space-between;
     aspect-ratio: auto;
-    gap: 35px;
-    padding: 32px;
+    gap: get-vw(35px);
+    padding: get-vw(32px);
   }
 
   &-info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: get-vw(12px);
     @media screen and (min-width: $breakpoint-mobile) {
-      gap: 16px;
+      gap: get-vw(16px);
     }
     &__icon {
       flex: none;
@@ -35,16 +35,16 @@
       gap: 2px;
     }
     &__name {
-      font-size: 12px;
+      font-size: get-vw(12px);
       font-weight: 500;
       line-height: 140%;
       color: rgba(24, 28, 39, 0.5);
       @media screen and (min-width: $breakpoint-mobile) {
-        font-size: 14px;
+        font-size: get-vw(14px);
       }
     }
     &__value {
-      font-size: 18px;
+      font-size: get-vw(18px);
       font-weight: 500;
       line-height: 140%;
       @media screen and (min-width: $breakpoint-mobile) {
