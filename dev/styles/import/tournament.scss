@@ -17,16 +17,17 @@
   }
 }
 .tournament-time {
-  margin-top: get-vw(16px);
+  margin-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: get-vw(8px);
+  gap: 8px;
   @media screen and (min-width: $breakpoint-mobile) {
     margin-top: 0px;
+    gap: get-vw(8px);
   }
   &__till-the-end {
     color: rgba(24, 28, 39, 0.5);
-    font-size: get-vw(14px);
+    font-size: 14px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
@@ -34,7 +35,6 @@
       color: #181c27;
       font-size: get-vw(18px);
       font-weight: 600;
-      line-height: 140%;
       text-align: center;
     }
   }
@@ -43,32 +43,34 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: get-vw(5px);
+  gap: 5px;
   &__couple {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: get-vw(4px);
-
+    gap: 4px;
     flex-wrap: wrap;
-    max-width: get-vw(100px);
-    max-width: get-vw(104px);
+    max-width: 100px;
+    max-width: 104px;
     @media screen and (min-width: $breakpoint-mobile) {
       row-gap: get-vw(8px);
+      max-width: get-vw(100px);
+      max-width: get-vw(104px);
     }
   }
   &__count {
     @include flexcc;
-    font-size: get-vw(32px);
+    // font-size: get-vw(32px);
+    // font-weight: 700;
+    font-size: 32px;
+    width: 48px;
+    height: 48px;
     font-weight: 700;
-    @media screen and (max-width: $breakpoint-mobile) {
-      width: get-vw(48px);
-      height: get-vw(48px);
-      background-image: url(../img/bg-count.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
+    background-image: url(../img/bg-count.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
     @media screen and (min-width: $breakpoint-mobile) {
       font-size: get-vw(24px);
       .icon {
@@ -81,7 +83,7 @@
   &__text {
     width: 100%;
     text-align: center;
-    font-size: get-vw(12px);
+    font-size: 12px;
     font-weight: 500;
     line-height: 140%;
     color: rgba(24, 28, 39, 0.5);
@@ -92,43 +94,54 @@
   &__divider {
     display: flex;
     flex-direction: column;
-    gap: get-vw(6px);
-    padding-top: get-vw(14px);
+    gap: 6px;
+    padding-top: 14px;
+    @media screen and (min-width: $breakpoint-mobile) {
+      gap: get-vw(6px);
+      padding-top: get-vw(14px);
+    }
     span {
       width: get-vw(8px);
       height: get-vw(8px);
       border-radius: get-vw(12px);
       background: #f2f3f7;
+      @media screen and (min-width: $breakpoint-mobile) {
+        width: 8px;
+        height: 8px;
+        border-radius: 12px;
+      }
     }
   }
 }
 
 .tournament-prize {
-  min-height: get-vw(98px);
+  min-height: 98px;
   aspect-ratio: 7 /2;
-  margin-top: get-vw(16px);
+  margin-top: 16px;
   background: url(../img/bg-prize.png) top center no-repeat;
   background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: get-vw(4px);
+  gap: 4px;
   @media screen and (min-width: $breakpoint-mobile) {
+    min-height: get-vw(98px);
+    margin-top: get-vw(16px);
+    gap: get-vw(4px);
     align-items: flex-start;
     background: none;
     aspect-ratio: auto;
   }
   &__title {
     color: rgba(24, 28, 39, 0.5);
-    font-size: get-vw(14px);
+    font-size: 14px;
     font-weight: 500;
     line-height: 140%;
     @media screen and (min-width: $breakpoint-mobile) {
       color: #181c27;
       font-size: get-vw(18px);
       font-weight: 600;
-      line-height: 140%;
     }
   }
   &__subtitle {
@@ -142,15 +155,16 @@
     }
   }
   &__text {
-    font-size: get-vw(32px);
+    font-size: 32px;
     font-weight: 700;
     line-height: 140%;
     display: flex;
     align-items: center;
-    gap: get-vw(8px);
+    gap: 8px;
     @media screen and (min-width: $breakpoint-mobile) {
       font-size: get-vw(48px);
       font-weight: 600;
+      gap: get-vw(8px);
       .svg-token {
         width: get-vw(24px);
         height: get-vw(24px);

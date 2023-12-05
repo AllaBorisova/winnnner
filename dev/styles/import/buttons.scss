@@ -11,18 +11,18 @@
   padding: 0;
   margin: 0;
   &-training {
-    width: get-vw(185px);
-    height: get-vw(58px);
+    width: 185px;
+    height: 58px;
     // background: url(../img/btn-training-mobile.svg) left top no-repeat;
     background-size: cover;
     clip-path: path(
       'M1 12C1 5.92487 5.92487 1 12 1H162.378C171.2 1 176.433 10.8646 171.485 18.169L148.454 52.169C146.408 55.1903 142.996 57 139.347 57H12C5.92487 57 1 52.0751 1 46V12Z'
     );
     background: #abeeee;
-    font-size: get-vw(18px);
+    font-size: 18px;
     font-weight: 700;
     color: #415868;
-    padding-left: get-vw(30px);
+    padding-left: 30px;
     @include tr;
     &:before {
       content: '';
@@ -37,7 +37,10 @@
       opacity: 0.4;
     }
     @media screen and (min-width: $breakpoint-mobile) {
+      width: get-vw(185px);
       height: get-vw(60px);
+      font-size: get-vw(18px);
+      padding-left: get-vw(30px);
       // background-image: url(../img/btn-training-desktop.svg);
       clip-path: path(
         'M1 12C1 5.92487 5.92487 1 12 1H162.799C171.543 1 176.792 10.7101 172.001 18.0259L148.429 54.0258C146.396 57.1297 142.936 59 139.226 59H12C5.92487 59 1 54.0751 1 48V12Z'
@@ -56,20 +59,20 @@
     }
   }
   &-start {
-    width: get-vw(190px);
-    height: get-vw(58px);
+    width: 190px;
+    height: 58px;
     // background: url(../img/btn-start-mobile.svg) right top no-repeat;
     clip-path: path(
       'M189 45.9999C189 52.075 184.075 56.9999 178 56.9999L22.1454 57C13.4113 57 8.16089 47.3106 12.93 39.9935L35.0908 5.99355C37.1211 2.87848 40.5878 0.999998 44.3061 0.999998L178 1.00001C184.075 1.00001 189 5.92488 189 12L189 45.9999Z'
     );
     background: #b3c3fe;
-    margin-left: get-vw(-27px);
+    margin-left: -27px;
     background-size: cover;
-    font-size: get-vw(18px);
+    font-size: 18px;
     font-weight: 700;
     color: #415868;
     justify-content: flex-end;
-    padding-right: get-vw(57px);
+    padding-right: 57px;
     @include tr;
 
     &:active,
@@ -81,7 +84,11 @@
       opacity: 0.4;
     }
     @media screen and (min-width: $breakpoint-mobile) {
+      width: get-vw(190px);
       height: get-vw(60px);
+      margin-left: get-vw(-27px);
+      font-size: get-vw(18px);
+      padding-right: get-vw(57px);
       // background-image: url(../img/btn-start-desktop.svg);
       clip-path: path(
         'M189 47.9999C189 54.075 184.075 58.9999 178 58.9999L21.744 59C13.0863 59 7.82202 49.4612 12.4372 42.1362L35.1194 6.13618C37.1336 2.93932 40.6477 1 44.4262 1L178 1.00001C184.075 1.00001 189 5.92488 189 12L189 47.9999Z'
@@ -103,13 +110,13 @@
   &-rating {
     // background: url(../img/btn-left-mobile.svg) left top no-repeat;
     background-size: cover;
-    height: get-vw(58px);
-    width: get-vw(185px);
-    gap: get-vw(20px);
-    font-size: get-vw(16px);
+    height: 58px;
+    width: 185px;
+    gap: 20px;
+    font-size: 16px;
     color: #13265a;
     font-weight: 500;
-    padding-left: get-vw(10px);
+    padding-left: 10px;
     // background-size: contain;
     clip-path: path(
       'M1 12C1 5.92487 5.92487 1 12 1H162.378C171.2 1 176.433 10.8646 171.485 18.169L148.454 52.169C146.408 55.1903 142.996 57 139.347 57H12C5.92487 57 1 52.0751 1 46V12Z'
@@ -125,6 +132,11 @@
     @media screen and (min-width: $breakpoint-mobile) {
       // background-image: url(../img/btn-left-desktop.png);
       // background-size: contain;
+      height: get-vw(58px);
+      width: get-vw(185px);
+      gap: get-vw(20px);
+      font-size: get-vw(16px);
+      padding-left: get-vw(10px);
       clip-path: path(
         'M0 12C0 5.37258 5.37258 0 12 0H162.799C172.338 0 178.064 10.5929 172.838 18.5737L149.266 54.5737C147.048 57.9597 143.274 60 139.226 60H12C5.37258 60 0 54.6274 0 48V12Z'
       );
@@ -161,15 +173,15 @@
       'M189 45.9999C189 52.075 184.075 56.9999 178 56.9999L22.1454 57C13.4113 57 8.16089 47.3106 12.93 39.9935L35.0908 5.99355C37.1211 2.87848 40.5878 1 44.3061 1L178 1.00001C184.075 1.00001 189 5.92488 189 12L189 45.9999Z'
     );
     background: #f2f3f7;
-    height: get-vw(58px);
-    width: get-vw(185px);
-    gap: get-vw(20px);
-    font-size: get-vw(16px);
+    height: 58px;
+    width: 185px;
+    gap: 20px;
+    font-size: 16px;
     color: #13265a;
     font-weight: 500;
     flex-direction: row-reverse;
-    padding-right: get-vw(10px);
-    margin-left: get-vw(-27px);
+    padding-right: 10px;
+    margin-left: -27px;
     background-size: contain;
     @include tr;
     &:active,
@@ -180,6 +192,12 @@
     }
     @media screen and (min-width: $breakpoint-mobile) {
       // background-image: url(../img/btn-right-desktop.png);
+      height: get-vw(58px);
+      width: get-vw(185px);
+      gap: get-vw(20px);
+      font-size: get-vw(16px);
+      padding-right: get-vw(10px);
+      margin-left: get-vw(-27px);
       clip-path: path(
         'M185 47.9999C185 54.6273 179.627 59.9999 173 59.9999L21.44 60C12.0596 60 6.30617 49.7206 11.2114 41.7249L33.2966 5.72497C35.4788 2.16796 39.3522 2.20038e-06 43.5252 2.57452e-06L173 1.41829e-05C179.627 1.47771e-05 185 5.3726 185 12L185 47.9999Z'
       );
@@ -289,31 +307,31 @@
     }
   }
   &-plus {
-    width: get-vw(16px);
-    height: get-vw(16px);
+    width: 16px;
+    height: 16px;
     position: relative;
     @include tr;
     border-radius: 50%;
     @include flexcc;
     background: #2153cb;
     .gradient {
-      width: get-vw(16px);
-      height: get-vw(16px);
+      width: 16px;
+      height: 16px;
       @include flexcc;
-      padding: get-vw(2px);
+      padding: 2px;
       background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
       border-radius: 50%;
-      transform: translate3d(get-vw(-2px), get-vw(-2px), 0);
+      transform: translate3d(-2px, -2px, 0);
       @include tr;
       svg {
-        width: get-vw(12px);
-        height: get-vw(12px);
+        width: 12px;
+        height: 12px;
         background: $color-primary;
         border-radius: 50%;
       }
     }
     &:hover .gradient {
-      transform: translate3d(get-vw(-3px), get-vw(-3px), 0);
+      transform: translate3d(-3px, -3px, 0);
     }
     &.disabled {
       opacity: 0.4;

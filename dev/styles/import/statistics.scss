@@ -1,12 +1,12 @@
 .statistics {
   background: url(../img/bg-statistic.png) center top no-repeat;
   background-size: cover;
-  padding: get-vw(35px) get-vw(12px) get-vw(28px) get-vw(12px);
+  padding: 35px 12px 28px 12px;
   // margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: get-vw(14px);
-  row-gap: get-vw(11px);
+  column-gap: 14px;
+  row-gap: 11px;
   aspect-ratio: 343/160;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-statistic-desktop.png) center top no-repeat;
@@ -20,7 +20,7 @@
   &-info {
     display: flex;
     align-items: center;
-    gap: get-vw(12px);
+    gap: 12px;
     @media screen and (min-width: $breakpoint-mobile) {
       gap: get-vw(16px);
     }
@@ -35,7 +35,7 @@
       gap: 2px;
     }
     &__name {
-      font-size: get-vw(12px);
+      font-size: 12px;
       font-weight: 500;
       line-height: 140%;
       color: rgba(24, 28, 39, 0.5);
@@ -44,11 +44,12 @@
       }
     }
     &__value {
-      font-size: get-vw(18px);
+      font-size: 18px;
       font-weight: 500;
       line-height: 140%;
       @media screen and (min-width: $breakpoint-mobile) {
         font-weight: 600;
+        font-size: get-vw(18px);
       }
     }
   }

@@ -20,7 +20,7 @@ body {
   height: 100%;
   font-family: $font;
   color: $color-text;
-  font-size: get-vw(14px);
+  font-size: get-vw-mobile(14px);
   line-height: 1.3;
   font-weight: 400;
   @media screen and (max-width: $breakpoint-mobile) {
@@ -53,21 +53,23 @@ button {
 
 .page {
   display: grid;
-  grid-template-columns: get-vw(90px) auto;
-  gap: get-vw(40px);
-  // max-width: calc(100% - get-vw(120px));
-  max-width: get-vw(1426px);
+  grid-template-columns: 1fr;
+  max-width: calc(100% - 32px);
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
   margin: 0 auto;
-  padding: get-vw(30px) get-vw(40px) get-vw(30px) get-vw(40px);
-  min-height: 100vh;
-  height: 100vh;
 
-  @media screen and (max-width: $breakpoint-mobile) {
-    grid-template-columns: 1fr;
-    max-width: calc(100% - get-vw(32px));
-    padding: 0;
-    padding-top: get-vw(16px);
-    padding-bottom: get-vw(16px);
+  @media screen and (min-width: $breakpoint-mobile) {
+    display: grid;
+    grid-template-columns: get-vw(90px) auto;
+    gap: get-vw(40px);
+    // max-width: calc(100% - get-vw(120px));
+    max-width: get-vw(1426px);
+    margin: 0 auto;
+    padding: get-vw(30px) get-vw(40px) get-vw(30px) get-vw(40px);
+    min-height: 100vh;
+    height: 100vh;
   }
   &__column {
     display: flex;
@@ -76,7 +78,7 @@ button {
     min-height: calc(100vh - get-vw(60px));
     justify-content: space-between;
     @media screen and (max-width: $breakpoint-mobile) {
-      gap: get-vw(16px);
+      gap: 16px;
     }
   }
 }
@@ -93,5 +95,8 @@ button {
     display: flex;
     flex-direction: column;
     gap: get-vw(16px);
+    @media screen and (max-width: $breakpoint-mobile) {
+      gap: 16px;
+    }
   }
 }

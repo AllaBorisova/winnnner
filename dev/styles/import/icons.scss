@@ -1,46 +1,61 @@
 .icon {
   // @include wh(38px);
-  width: get-vw(38px);
-  height: get-vw(38px);
+  width: 38px;
+  height: 38px;
   background: #a4c0d2;
-  border-radius: get-vw(8px);
+  border-radius: 8px;
   padding: 0;
   @include flexcc;
   line-height: 0;
   span {
     background: #dee5ee;
-    border-radius: get-vw(8px);
+    border-radius: 8px;
     width: 100%;
     height: 100%;
-    transform: translate3d(get-vw(-2px), get-vw(-3px), 0);
+    transform: translate3d(-2px, -3px, 0);
     position: relative;
     @include flexcc;
     &:after {
       content: '';
       display: block;
-      width: get-vw(14px);
-      height: get-vw(16px);
+      width: 14px;
+      height: 16px;
       background: url(../img/light4.svg) left top no-repeat;
-      left: get-vw(3px);
-      top: get-vw(3px);
+      left: 3px;
+      top: 3px;
       position: absolute;
       z-index: 3;
     }
     &:before {
       content: '';
-      width: get-vw(26px);
-      height: get-vw(26px);
+      width: 26px;
+      height: 26px;
       display: block;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
     }
   }
-
   @media screen and (min-width: $breakpoint-mobile) {
     width: get-vw(50px);
     height: get-vw(50px);
+    border-radius: get-vw(8px);
+    span {
+      border-radius: get-vw(8px);
+      transform: translate3d(get-vw(-2px), get-vw(-3px), 0);
+      &:after {
+        width: get-vw(14px);
+        height: get-vw(16px);
+        left: get-vw(3px);
+        top: get-vw(3px);
+      }
+      &:before {
+        width: get-vw(26px);
+        height: get-vw(26px);
+      }
+    }
   }
+
   &_rating span:before {
     background-image: url(../img/icon-rating.png);
     @include tr;
@@ -100,23 +115,23 @@
 }
 
 .icon-theme {
-  width: get-vw(42px);
-  height: get-vw(42px);
-  border-radius: get-vw(8px);
-  padding: get-vw(2px);
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  padding: 2px;
   // background: linear-gradient(to bottom, #d6e0e6, #d6e1e8 0%, #f4fbff);
   background: linear-gradient(to bottom, #e1e9f1, #dee5ee, #dae2ea);
 
   span {
-    border-radius: get-vw(8px);
+    border-radius: 8px;
     width: 100%;
     height: 100%;
     background: #dee5ee;
     @include flexcc;
     &:before {
       content: '';
-      width: get-vw(18px);
-      height: get-vw(18px);
+      width: 18px;
+      height: 18px;
       display: block;
       background-position: center;
       background-repeat: no-repeat;
@@ -138,21 +153,34 @@
       background: #2b69ff;
     }
   }
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: get-vw(42px);
+    height: get-vw(42px);
+    border-radius: get-vw(8px);
+    padding: get-vw(2px);
+    span {
+      border-radius: get-vw(8px);
+      &:before {
+        width: get-vw(18px);
+        height: get-vw(18px);
+      }
+    }
+  }
 }
 
 .icon-timer {
   // @include wh(48px);
-  width: get-vw(48px);
-  height: get-vw(48px);
+  width: 48px;
+  height: 48px;
   background: linear-gradient(to bottom, #f5f7fb, #f1f3f7, #e7ebf1);
-  border-radius: get-vw(12px);
+  border-radius: 12px;
   padding: 0;
   @include flexcc;
-  padding: get-vw(2px);
+  padding: 2px;
   line-height: 0;
   span {
     background: #f2f3f7;
-    border-radius: get-vw(12px);
+    border-radius: 12px;
     width: 100%;
     height: 100%;
     position: relative;
@@ -160,11 +188,11 @@
     &:after {
       content: '';
       display: block;
-      width: get-vw(14px);
-      height: get-vw(16px);
+      width: 14px;
+      height: 16px;
       background: url(../img/light5.svg) left top no-repeat;
-      left: get-vw(3px);
-      top: get-vw(3px);
+      left: 3px;
+      top: 3px;
       position: absolute;
       z-index: 3;
     }
@@ -174,8 +202,15 @@
     height: get-vw(50px);
     border-radius: get-vw(8px);
     box-shadow: 0px get-vw(4px) 0px 0px #b9c8dc;
+    padding: get-vw(2px);
     span {
       border-radius: get-vw(8px);
+      &:after {
+        width: get-vw(14px);
+        height: get-vw(16px);
+        left: get-vw(3px);
+        top: get-vw(3px);
+      }
     }
   }
 }
