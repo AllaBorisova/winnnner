@@ -26,6 +26,15 @@
       position: absolute;
       z-index: 3;
     }
+    &:before {
+      content: '';
+      width: get-vw(26px);
+      height: get-vw(26px);
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   @media screen and (min-width: $breakpoint-mobile) {
@@ -33,59 +42,59 @@
     height: get-vw(50px);
   }
   &_rating span:before {
-    content: url(../img/icon-rating.png);
+    background-image: url(../img/icon-rating.png);
     @include tr;
   }
   &_rules span:before {
-    content: url(../img/icon-rules.png);
+    background-image: url(../img/icon-rules.png);
     @include tr;
   }
   &_wallet span:before {
-    content: url(../img/icon-wallet.png);
+    background-image: url(../img/icon-wallet.png);
     @include tr;
   }
   &_reward span:before {
-    content: url(../img/icon-reward.png);
+    background-image: url(../img/icon-reward.png);
     @include tr;
   }
   &_evaluation span:before {
-    content: url(../img/icon-evaluation.png);
+    background-image: url(../img/icon-evaluation.png);
     @include tr;
   }
   &_flag span:before {
-    content: url(../img/icon-flag.png);
+    background-image: url(../img/icon-flag.png);
     @include tr;
   }
   &_dumbbell span:before {
-    content: url(../img/icon-dumbbell.png);
+    background-image: url(../img/icon-dumbbell.png);
     @include tr;
   }
   &_coins span:before {
-    content: url(../img/icon-coins.png);
+    background-image: url(../img/icon-coins.png);
     @include tr;
   }
   &_info span:before {
-    content: url(../img/icon-info.png);
+    background-image: url(../img/icon-info.png);
     @include tr;
   }
   &_logout span:before {
-    content: url(../img/icon-logout.svg);
+    background-image: url(../img/icon-logout.svg);
     @include tr;
   }
   &_tokens span:before {
-    content: url(../img/icon-tokens.png);
+    background-image: url(../img/icon-tokens.png);
     @include tr;
   }
   &_medal span:before {
-    content: url(../img/icon-medal.png);
+    background-image: url(../img/icon-medal.png);
     @include tr;
   }
   &_timer span:before {
-    content: url(../img/icon-timer.png);
+    background-image: url(../img/icon-timer.png);
     @include tr;
   }
   &_online span:before {
-    content: url(../img/icon-online.png);
+    background-image: url(../img/icon-online.png);
     @include tr;
   }
 }
@@ -104,14 +113,23 @@
     height: 100%;
     background: #dee5ee;
     @include flexcc;
+    &:before {
+      content: '';
+      width: get-vw(18px);
+      height: get-vw(18px);
+      display: block;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   &_light span:before {
-    content: url(../img/icon-light-theme.png);
+    background-image: url(../img/icon-light-theme.png);
     @include tr;
   }
   &_dark span:before {
-    content: url(../img/icon-dark-theme.png);
+    background-image: url(../img/icon-dark-theme.png);
     @include tr;
   }
   &.active {
