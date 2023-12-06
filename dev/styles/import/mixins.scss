@@ -27,3 +27,7 @@ $max-breakpoint: 1920;
   // @return calc($target / $vw-context) * 1vw;
   @return $target;
 }
+@function get-vw-man($target) {
+  $vw-context: ($max-breakpoint * 0.01) * 1px;
+  @return calc($target / $vw-context) * 1vw;
+}

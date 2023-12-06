@@ -6,7 +6,7 @@
   @media screen and (min-width: $breakpoint-mobile) {
     border-radius: 16px;
     background: url(../img/man.png) bottom center no-repeat #f2f3f7;
-    background-size: get-vw(384px);
+    background-size: get-vw-man(384px);
     padding: get-vw(20px);
     padding-bottom: 0px;
     margin-top: 0;
