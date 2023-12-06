@@ -178,6 +178,8 @@
   @include flexcc;
   padding: 2px;
   line-height: 0;
+  font-weight: 700;
+  font-size: 32px;
   span {
     background: #f2f3f7;
     border-radius: 12px;
@@ -201,10 +203,13 @@
     width: get-vw(50px);
     height: get-vw(50px);
     border-radius: get-vw(8px);
+    font-size: 24px;
     box-shadow: 0px get-vw(4px) 0px 0px #b9c8dc;
     padding: get-vw(2px);
+    background: #dee5ee;
     span {
-      border-radius: get-vw(8px);
+      // border-radius: get-vw(8px);
+      background: none;
       &:after {
         width: get-vw(14px);
         height: get-vw(16px);

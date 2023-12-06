@@ -67,26 +67,26 @@
   }
 
   &__count {
-    @include flexcc;
+    // @include flexcc;
     // font-size: get-vw(32px);
     // font-weight: 700;
-    font-size: 32px;
-    width: 48px;
-    height: 48px;
-    font-weight: 700;
-    background-image: url(../img/bg-count.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    // font-size: 32px;
+    // width: 48px;
+    // height: 48px;
+    // font-weight: 700;
+    // background-image: url(../img/bg-count.svg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: contain;
 
-    @media screen and (min-width: $breakpoint-mobile) {
-      font-size: get-vw(24px);
-      .icon {
-        width: auto;
-        height: auto;
-        background: none;
-      }
-    }
+    // @media screen and (min-width: $breakpoint-mobile) {
+    //   font-size: get-vw(24px);
+    //   .icon {
+    //     width: auto;
+    //     height: auto;
+    //     background: none;
+    //   }
+    // }
   }
   &__text {
     width: 100%;
