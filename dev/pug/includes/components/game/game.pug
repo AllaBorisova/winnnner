@@ -1,4 +1,14 @@
 .game-block 
 	.game-block__buttons 
-		button.btn.btn-training.btn-games Тренировка
-		button.btn.btn-start.btn-games Старт
+		button.btn.btn-training.btn-games
+			span.btn-training__text Тренировка
+			span.btn-training__bg1
+				+svg-training('training-desktop')
+			span.btn-training__bg2
+				+svg-training('training-active')
+		button.btn.btn-start.btn-games 
+			span.btn-start__text Старт
+			span.btn-start__bg1
+				+svg-start('start-desktop')
+			span.btn-start__bg2
+				+svg-start('start-active')

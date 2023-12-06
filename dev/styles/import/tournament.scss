@@ -49,15 +49,23 @@
     align-items: center;
     justify-content: space-between;
     gap: 4px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    // flex-wrap: wrap;
     max-width: 100px;
     max-width: 104px;
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+    }
     @media screen and (min-width: $breakpoint-mobile) {
       row-gap: get-vw(8px);
       max-width: get-vw(100px);
       max-width: get-vw(104px);
     }
   }
+
   &__count {
     @include flexcc;
     // font-size: get-vw(32px);

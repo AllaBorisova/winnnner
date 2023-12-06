@@ -41,27 +41,59 @@
 // };
 
 //buttons
-const callToActionBtns = document.querySelectorAll('.btn-rights');
+// const callToActionBtns = document.querySelectorAll('.btn-rights');
 
-callToActionBtns.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    callToActionBtns.forEach((f) =>
-      f != e.target ? f.classList.remove('active') : ''
-    );
-    e.target.classList.toggle('active');
-  });
+// callToActionBtns.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     callToActionBtns.forEach((f) =>
+//       f != e.target ? f.classList.remove('active') : ''
+//     );
+//     e.target.classList.toggle('active');
+//   });
+// });
+
+// const callToActionBtns2 = document.querySelectorAll('.btn-games');
+
+// callToActionBtns2.forEach((btn) => {
+//   btn.addEventListener('click', (e) => {
+//     callToActionBtns2.forEach((f) =>
+//       f != e.target ? f.classList.remove('active') : ''
+//     );
+//     e.target.classList.toggle('active');
+//   });
+// });
+document.addEventListener('DOMContentLoaded', function (event) {
+  const element = document.querySelectorAll('.btn-games');
+
+  if (element) {
+    element.forEach(function (el, key) {
+      el.addEventListener('click', function () {
+        el.classList.toggle('active');
+        element.forEach(function (ell, els) {
+          if (key !== els) {
+            ell.classList.remove('active');
+          }
+        });
+      });
+    });
+  }
+
+  const element2 = document.querySelectorAll('.btn-rights');
+
+  if (element2) {
+    element2.forEach(function (el, key) {
+      el.addEventListener('click', function () {
+        el.classList.toggle('active');
+        element2.forEach(function (ell, els) {
+          if (key !== els) {
+            ell.classList.remove('active');
+          }
+        });
+      });
+    });
+  }
 });
 
-const callToActionBtns2 = document.querySelectorAll('.btn-games');
-
-callToActionBtns2.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    callToActionBtns2.forEach((f) =>
-      f != e.target ? f.classList.remove('active') : ''
-    );
-    e.target.classList.toggle('active');
-  });
-});
 //timer
 function updateClock() {
   const currentTime = new Date();
