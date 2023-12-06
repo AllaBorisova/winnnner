@@ -23,6 +23,7 @@
 $max-breakpoint: 1920;
 
 @function get-vw($target) {
-  $vw-context: ($max-breakpoint * 0.01) * 1px;
-  @return calc($target / $vw-context) * 1vw;
+  // $vw-context: ($max-breakpoint * 0.01) * 1px;
+  // @return calc($target / $vw-context) * 1vw;
+  @return $target;
 }
