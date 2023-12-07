@@ -1,5 +1,5 @@
 .game-block {
-  // min-height: 303px;
+  min-height: get-vw-mobile(303px);
   display: flex;
   align-items: flex-end;
   background: url(../img/bg-game-mobile.jpg) center no-repeat;

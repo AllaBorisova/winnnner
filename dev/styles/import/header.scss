@@ -158,16 +158,16 @@
   }
 }
 
-.header-btn-hamburger {
-  display: none;
-  @media screen and (max-width: $breakpoint-mobile) {
-    @include flexcc;
-    width: 48px;
-    height: 44px;
-    background-image: url(../img/hamburger-full.svg);
-    background-repeat: no-repeat;
-    background-position: top center;
-    filter: drop-shadow(0px 4px 0px #2153cb);
-    border-radius: 8px;
-  }
-}
+// .header-btn-hamburger {
+//   display: none;
+//   @media screen and (max-width: $breakpoint-mobile) {
+//     @include flexcc;
+//     width: 48px;
+//     height: 44px;
+//     background-image: url(../img/hamburger-full.svg);
+//     background-repeat: no-repeat;
+//     background-position: top center;
+//     filter: drop-shadow(0px 4px 0px #2153cb);
+//     border-radius: 8px;
+//   }
+// }

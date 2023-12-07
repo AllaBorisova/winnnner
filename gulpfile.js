@@ -92,20 +92,18 @@ const images = () => {
   );
 };
 const svg = () => {
-  return (
-    gulp
-      .src('./dev/img/*.svg')
-      // .pipe(
-      //   svgSprite({
-      //     mode: {
-      //       stack: {
-      //         sprite: '../sprite.svg',
-      //       },
-      //     },
-      //   })
-      // )
-      .pipe(gulp.dest('./build/img'))
-  );
+  return gulp
+    .src('./dev/img/*.svg')
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg',
+          },
+        },
+      })
+    )
+    .pipe(gulp.dest('./build/img'));
 };
 
 // gulp.task("watch", function () {
