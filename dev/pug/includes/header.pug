@@ -20,11 +20,14 @@ header.header
 				.header-tokens__title Мои жетоны
 				.header-tokens__text
 					span.header-tokens__value 400
-					button.btn.btn-plus.header-tokens__plus
-						span.gradient
-							+svg('plus')
+					//- button.btn.btn-plus.header-tokens__plus
+					button.btn.header-tokens__plus
+						include ../../img/add.svg
+						//- span.gradient
+							//- +svg('plus')
 					button.btn.header-tokens__question
-						+svg('question')
+						//- +svg('question')
+						include ../../img/question.svg
 		button.btn.btn-blue 
 			span.gradient 
 				span Пополнить жетоны

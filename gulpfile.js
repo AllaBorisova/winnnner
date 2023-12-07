@@ -81,8 +81,8 @@ const server = () => {
 const images = () => {
   return (
     gulp
-      .src('./dev/img/*')
-      .pipe(changed('./build/img'))
+      .src('./dev/img/**/*')
+      .pipe(changed('./dev/img/**/*'))
       // .pipe(
       //   imagemin({
       //     verbose: true,

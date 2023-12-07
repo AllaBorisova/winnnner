@@ -20,14 +20,17 @@
   filter: brightness(0) invert(1);
 }
 
-$max-breakpoint: 1920;
+$max-breakpoint-desktop: 1920;
 
 @function get-vw($target) {
-  // $vw-context: ($max-breakpoint * 0.01) * 1px;
+  // $vw-context: ($max-breakpoint-desktop * 0.01) * 1px;
   // @return calc($target / $vw-context) * 1vw;
   @return $target;
 }
-@function get-vw-man($target) {
-  $vw-context: ($max-breakpoint * 0.01) * 1px;
+
+$max-breakpoint-mobile: 375;
+
+@function get-vw-mobile($target) {
+  $vw-context: ($max-breakpoint-mobile * 0.01) * 1px;
   @return calc($target / $vw-context) * 1vw;
 }

@@ -1,35 +1,35 @@
 .icon {
   // @include wh(38px);
-  width: 38px;
-  height: 38px;
+  width: get-vw-mobile(38px);
+  height: get-vw-mobile(38px);
   background: #a4c0d2;
-  border-radius: 8px;
+  border-radius: get-vw-mobile(8px);
   padding: 0;
   @include flexcc;
   line-height: 0;
   span {
     background: #dee5ee;
-    border-radius: 8px;
+    border-radius: get-vw-mobile(8px);
     width: 100%;
     height: 100%;
-    transform: translate3d(-2px, -3px, 0);
+    transform: translate3d(get-vw-mobile(-2px), get-vw-mobile(-3px), 0);
     position: relative;
     @include flexcc;
     &:after {
       content: '';
       display: block;
-      width: 14px;
-      height: 16px;
+      width: get-vw-mobile(14px);
+      height: get-vw-mobile(16px);
       background: url(../img/light4.svg) left top no-repeat;
-      left: 3px;
-      top: 3px;
+      left: get-vw-mobile(3px);
+      top: get-vw-mobile(3px);
       position: absolute;
       z-index: 3;
     }
     &:before {
       content: '';
-      width: 26px;
-      height: 26px;
+      width: get-vw-mobile(20px);
+      height: get-vw-mobile(20px);
       display: block;
       background-position: center;
       background-repeat: no-repeat;
@@ -57,59 +57,59 @@
   }
 
   &_rating span:before {
-    background-image: url(../img/icon-rating.png);
+    background-image: url(../img/icons/icon-rating.png);
     @include tr;
   }
   &_rules span:before {
-    background-image: url(../img/icon-rules.png);
+    background-image: url(../img/icons/icon-rules.png);
     @include tr;
   }
   &_wallet span:before {
-    background-image: url(../img/icon-wallet.png);
+    background-image: url(../img/icons/icon-wallet.png);
     @include tr;
   }
   &_reward span:before {
-    background-image: url(../img/icon-reward.png);
+    background-image: url(../img/icons/icon-reward.png);
     @include tr;
   }
   &_evaluation span:before {
-    background-image: url(../img/icon-evaluation.png);
+    background-image: url(../img/icons/icon-evaluation.png);
     @include tr;
   }
   &_flag span:before {
-    background-image: url(../img/icon-flag.png);
+    background-image: url(../img/icons/icon-flag.png);
     @include tr;
   }
   &_dumbbell span:before {
-    background-image: url(../img/icon-dumbbell.png);
+    background-image: url(../img/icons/icon-dumbbell.png);
     @include tr;
   }
   &_coins span:before {
-    background-image: url(../img/icon-coins.png);
+    background-image: url(../img/icons/icon-coins.png);
     @include tr;
   }
   &_info span:before {
-    background-image: url(../img/icon-info.png);
+    background-image: url(../img/icons/icon-info.png);
     @include tr;
   }
   &_logout span:before {
-    background-image: url(../img/icon-logout.svg);
+    background-image: url(../img/icons/icon-logout.svg);
     @include tr;
   }
   &_tokens span:before {
-    background-image: url(../img/icon-tokens.png);
+    background-image: url(../img/icons/icon-tokens.png);
     @include tr;
   }
   &_medal span:before {
-    background-image: url(../img/icon-medal.png);
+    background-image: url(../img/icons/icon-medal.png);
     @include tr;
   }
   &_timer span:before {
-    background-image: url(../img/icon-timer.png);
+    background-image: url(../img/icons/icon-timer.png);
     @include tr;
   }
   &_online span:before {
-    background-image: url(../img/icon-online.png);
+    background-image: url(../img/icons/icon-online.png);
     @include tr;
   }
 }
@@ -140,11 +140,11 @@
   }
 
   &_light span:before {
-    background-image: url(../img/icon-light-theme.png);
+    background-image: url(../img/icons/icon-light-theme.png);
     @include tr;
   }
   &_dark span:before {
-    background-image: url(../img/icon-dark-theme.png);
+    background-image: url(../img/icons/icon-dark-theme.png);
     @include tr;
   }
   &.active {

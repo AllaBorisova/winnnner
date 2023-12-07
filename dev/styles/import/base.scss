@@ -61,14 +61,13 @@ button::-moz-focus-inner {
 .page {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: calc(100% - 32px);
-  padding: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  max-width: calc(100% - get-vw-mobile(32px));
+  padding: get-vw-mobile(16px) 0;
   margin: 0 auto;
+  height: 100vh;
+  align-items: stretch;
 
   @media screen and (min-width: $breakpoint-mobile) {
-    display: grid;
     grid-template-columns: get-vw(90px) auto;
     gap: get-vw(40px);
     // max-width: calc(100% - get-vw(120px));
@@ -81,16 +80,21 @@ button::-moz-focus-inner {
   &__column {
     display: flex;
     flex-direction: column;
-    gap: get-vw(32px);
-    min-height: calc(100vh - get-vw(60px));
-    justify-content: space-between;
-    @media screen and (max-width: $breakpoint-mobile) {
-      gap: 16px;
+    gap: get-vw-mobile(16px);
+    // display: flex;
+    // flex-direction: column;
+
+    @media screen and (min-width: $breakpoint-mobile) {
+      gap: get-vw(32px);
+      min-height: calc(100vh - get-vw(60px));
+      justify-content: space-between;
     }
   }
 }
 .main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   // &__columns {
   @media screen and (min-width: $breakpoint-mobile) {
     display: grid;
@@ -101,9 +105,12 @@ button::-moz-focus-inner {
   &__column {
     display: flex;
     flex-direction: column;
-    gap: get-vw(16px);
-    @media screen and (max-width: $breakpoint-mobile) {
-      gap: 16px;
+    gap: get-vw-mobile(16px);
+    flex: 1;
+    @media screen and (min-width: $breakpoint-mobile) {
+      // display: flex;
+      // flex-direction: column;
+      gap: get-vw(16px);
     }
   }
 }

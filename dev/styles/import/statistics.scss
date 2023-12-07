@@ -1,12 +1,13 @@
 .statistics {
   background: url(../img/bg-statistic.png) center top no-repeat;
   background-size: cover;
-  padding: 35px 12px 28px 12px;
+  padding: get-vw-mobile(35px) get-vw-mobile(12px) get-vw-mobile(28px)
+    get-vw-mobile(12px);
   // margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 14px;
-  row-gap: 11px;
+  column-gap: get-vw-mobile(14px);
+  row-gap: get-vw-mobile(11px);
   aspect-ratio: 343/160;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-statistic-desktop.png) center top no-repeat;
@@ -15,12 +16,14 @@
     aspect-ratio: auto;
     gap: get-vw(35px);
     padding: get-vw(32px);
+    column-gap: get-vw(14px);
+    row-gap: get-vw(11px);
   }
 
   &-info {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: get-vw-mobile(12px);
     @media screen and (min-width: $breakpoint-mobile) {
       gap: get-vw(16px);
     }
@@ -32,10 +35,13 @@
       align-items: flex-start;
       justify-content: center;
       flex-direction: column;
-      gap: 2px;
+      gap: get-vw-mobile(2px);
+      @media screen and (min-width: $breakpoint-mobile) {
+        gap: get-vw(2px);
+      }
     }
     &__name {
-      font-size: 12px;
+      font-size: get-vw-mobile(12px);
       font-weight: 500;
       line-height: 140%;
       color: rgba(24, 28, 39, 0.5);
@@ -44,7 +50,7 @@
       }
     }
     &__value {
-      font-size: 18px;
+      font-size: get-vw-mobile(18px);
       font-weight: 500;
       line-height: 140%;
       @media screen and (min-width: $breakpoint-mobile) {

@@ -17,17 +17,17 @@
   }
 }
 .tournament-time {
-  margin-top: 16px;
+  // margin-top: get-vw-mobile(16px);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: get-vw-mobile(8px);
   @media screen and (min-width: $breakpoint-mobile) {
     margin-top: 0px;
     gap: get-vw(8px);
   }
   &__till-the-end {
     color: rgba(24, 28, 39, 0.5);
-    font-size: 14px;
+    font-size: get-vw-mobile(14px);
     font-weight: 500;
     line-height: 140%;
     text-align: center;
@@ -43,26 +43,32 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 5px;
+  gap: get-vw-mobile(5px);
+  @media screen and (min-width: $breakpoint-mobile) {
+    gap: get-vw(5px);
+  }
   &__couple {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 4px;
+    gap: get-vw-mobile(4px);
     flex-direction: column;
     // flex-wrap: wrap;
-    max-width: 100px;
-    max-width: 104px;
-    &-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 4px;
-    }
+    // max-width: 100px;
+    max-width: get-vw-mobile(104px);
     @media screen and (min-width: $breakpoint-mobile) {
       row-gap: get-vw(8px);
       max-width: get-vw(100px);
       max-width: get-vw(104px);
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: get-vw-mobile(4px);
+      @media screen and (min-width: $breakpoint-mobile) {
+        gap: get-vw(4px);
+      }
     }
   }
 
@@ -91,7 +97,7 @@
   &__text {
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: get-vw-mobile(12px);
     font-weight: 500;
     line-height: 140%;
     color: rgba(24, 28, 39, 0.5);
@@ -102,37 +108,38 @@
   &__divider {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding-top: 14px;
+    gap: get-vw-mobile(6px);
+    padding-top: get-vw-mobile(14px);
     @media screen and (min-width: $breakpoint-mobile) {
       gap: get-vw(6px);
       padding-top: get-vw(14px);
     }
     span {
-      width: get-vw(8px);
-      height: get-vw(8px);
-      border-radius: get-vw(12px);
+      width: get-vw-mobile(8px);
+      height: get-vw-mobile(8px);
+      border-radius: get-vw-mobile(12px);
       background: #f2f3f7;
       @media screen and (min-width: $breakpoint-mobile) {
-        width: 8px;
-        height: 8px;
-        border-radius: 12px;
+        width: get-vw(8px);
+        height: get-vw(8px);
+        border-radius: get-vw(12px);
       }
     }
   }
 }
 
 .tournament-prize {
-  min-height: 98px;
-  aspect-ratio: 7 /2;
-  margin-top: 16px;
+  min-height: get-vw-mobile(98px);
+  margin-top: get-vw-mobile(16px);
+  gap: get-vw-mobile(4px);
   background: url(../img/bg-prize.png) top center no-repeat;
   background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+
+  aspect-ratio: 7 /2;
   @media screen and (min-width: $breakpoint-mobile) {
     min-height: get-vw(98px);
     margin-top: get-vw(16px);
@@ -143,7 +150,7 @@
   }
   &__title {
     color: rgba(24, 28, 39, 0.5);
-    font-size: 14px;
+    font-size: get-vw-mobile(14px);
     font-weight: 500;
     line-height: 140%;
     @media screen and (min-width: $breakpoint-mobile) {
@@ -163,12 +170,12 @@
     }
   }
   &__text {
-    font-size: 32px;
+    font-size: get-vw-mobile(32px);
     font-weight: 700;
     line-height: 140%;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: get-vw-mobile(8px);
     @media screen and (min-width: $breakpoint-mobile) {
       font-size: get-vw(48px);
       font-weight: 600;

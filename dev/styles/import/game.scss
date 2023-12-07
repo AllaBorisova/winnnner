@@ -1,16 +1,17 @@
 .game-block {
-  min-height: 303px;
+  // min-height: 303px;
   display: flex;
   align-items: flex-end;
   background: url(../img/bg-game-mobile.jpg) center no-repeat;
   background-size: cover;
   // margin-top: 16px;
-  border-radius: 16px;
+  border-radius: get-vw-mobile(16px);
   flex: 1;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-game.jpg) center no-repeat;
     background-size: cover;
     padding-bottom: get-vw(24px);
+    border-radius: get-vw(16px);
     // min-height: 424px;
     // min-height: get-vw(200px);
     min-height: auto;
@@ -22,7 +23,7 @@
     justify-content: space-between;
     width: 100%;
     @media screen and (min-width: $breakpoint-mobile) {
-      max-width: 344px;
+      max-width: get-vw(344px);
       margin-left: auto;
       margin-right: auto;
     }

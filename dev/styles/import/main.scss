@@ -1,7 +1,7 @@
 .logo {
   svg {
-    width: 40px;
-    height: 40px;
+    width: get-vw-mobile(40px);
+    height: get-vw-mobile(40px);
     @media screen and (min-width: $breakpoint-mobile) {
       width: get-vw(50px);
       height: get-vw(50px);

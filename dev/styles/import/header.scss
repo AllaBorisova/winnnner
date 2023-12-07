@@ -134,12 +134,12 @@
     }
   }
   &__question {
-    width: get-vw(18px);
-    height: get-vw(18px);
+    // width: get-vw(18px);
+    // height: get-vw(18px);
     @media screen and (max-width: $breakpoint-mobile) {
       margin-left: auto;
-      width: 18px;
-      height: 18px;
+      // width: 18px;
+      // height: 18px;
     }
     svg {
       width: 100%;

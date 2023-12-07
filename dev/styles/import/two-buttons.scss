@@ -1,18 +1,18 @@
 .two-buttons {
-  margin-top: 16px;
+  margin-top: get-vw-mobile(16px);
   width: 100%;
   display: flex;
   flex-direction: column;
   @media screen and (min-width: $breakpoint-mobile) {
-    border-radius: 16px;
+    border-radius: get-vw(16px);
     background: url(../img/man.png) bottom center no-repeat #f2f3f7;
-    background-size: get-vw-man(384px);
+    background-size: get-vw(384px);
     padding: get-vw(20px);
     padding-bottom: 0px;
     margin-top: 0;
   }
   @media screen and (max-width: 1440px) {
-    background-size: 190px;
+    background-size: get-vw(190px);
   }
   &__inner {
     display: flex;
