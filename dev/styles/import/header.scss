@@ -125,19 +125,24 @@
   &__text {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: get-vw(4px);
   }
   &__plus {
-    margin-left: 6px;
+    // margin-left: get-vw(6px);
     @media screen and (min-width: $breakpoint-mobile) {
       display: none;
     }
   }
   &__question {
+    width: get-vw-mobile(22px);
+    height: get-vw-mobile(22px);
+    margin-left: auto;
     // width: get-vw(18px);
     // height: get-vw(18px);
-    @media screen and (max-width: $breakpoint-mobile) {
-      margin-left: auto;
+    @media screen and (min-width: $breakpoint-mobile) {
+      width: get-vw(22px);
+      height: get-vw(22px);
+      margin-left: 0;
       // width: 18px;
       // height: 18px;
     }

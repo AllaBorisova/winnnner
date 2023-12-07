@@ -26,31 +26,7 @@
     @include tr;
     overflow: hidden;
     position: relative;
-    &:before {
-      content: '';
-      display: block;
-      width: 125px;
-      height: 58px;
-      background: url(../img/training-light1.svg) top left no-repeat;
-      position: absolute;
-      left: -100px;
-      top: 0px;
-      z-index: 7;
-      transition: all 1s ease-out;
-    }
-    &:after {
-      content: '';
-      display: block;
-      width: 125px;
-      height: 58px;
-      background: url(../img/training-light2.svg) top left no-repeat;
-      position: absolute;
-      left: -141px;
-      top: 0px;
-      z-index: 7;
-      transition: all 1s ease-out;
-    }
-    position: relative;
+
     .btn-training__text {
       position: relative;
       z-index: 5;
@@ -73,14 +49,7 @@
     .btn-training__bg2 {
       display: none;
     }
-    &:hover {
-      &:before {
-        left: 200px;
-      }
-      &:after {
-        left: 241px;
-      }
-    }
+
     &:active,
     &.active {
       .btn-training__bg1 {
@@ -107,6 +76,38 @@
       // );
       // background: url(../img/sprite-training.svg#training-active);
       // background-size: contain;
+      &:before {
+        content: '';
+        display: block;
+        width: 125px;
+        height: 58px;
+        background: url(../img/training-light1.svg) top left no-repeat;
+        position: absolute;
+        left: -100px;
+        top: 0px;
+        z-index: 7;
+        transition: all 1s ease-out;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 125px;
+        height: 58px;
+        background: url(../img/training-light2.svg) top left no-repeat;
+        position: absolute;
+        left: -141px;
+        top: 0px;
+        z-index: 7;
+        transition: all 1s ease-out;
+      }
+      &:hover {
+        &:before {
+          left: 200px;
+        }
+        &:after {
+          left: 241px;
+        }
+      }
     }
   }
   &-start {
@@ -127,30 +128,30 @@
     @include tr;
     position: relative;
     overflow: hidden;
-    &:before {
-      content: '';
-      display: block;
-      width: 113px;
-      height: 49px;
-      background: url(../img/start-light1.svg) top left no-repeat;
-      position: absolute;
-      left: -100px;
-      top: 0px;
-      z-index: 7;
-      transition: all 1s ease-out;
-    }
-    &:after {
-      content: '';
-      display: block;
-      width: 118px;
-      height: 60px;
-      background: url(../img/start-light2.svg) top left no-repeat;
-      position: absolute;
-      left: -126px;
-      top: 0px;
-      z-index: 7;
-      transition: all 1s ease-out;
-    }
+    // &:before {
+    //   content: '';
+    //   display: block;
+    //   width: 113px;
+    //   height: 49px;
+    //   background: url(../img/start-light1.svg) top left no-repeat;
+    //   position: absolute;
+    //   left: -100px;
+    //   top: 0px;
+    //   z-index: 7;
+    //   transition: all 1s ease-out;
+    // }
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   width: 118px;
+    //   height: 60px;
+    //   background: url(../img/start-light2.svg) top left no-repeat;
+    //   position: absolute;
+    //   left: -126px;
+    //   top: 0px;
+    //   z-index: 7;
+    //   transition: all 1s ease-out;
+    // }
 
     &:active,
     &.active {
@@ -182,14 +183,6 @@
       display: none;
     }
 
-    &:hover {
-      &:before {
-        left: 200px;
-      }
-      &:after {
-        left: 241px;
-      }
-    }
     &:active,
     &.active {
       // background: #a2b2eb;
@@ -211,6 +204,38 @@
       // clip-path: path(
       //   'M189 47.9999C189 54.075 184.075 58.9999 178 58.9999L21.744 59C13.0863 59 7.82202 49.4612 12.4372 42.1362L35.1194 6.13618C37.1336 2.93932 40.6477 1 44.4262 1L178 1.00001C184.075 1.00001 189 5.92488 189 12L189 47.9999Z'
       // );
+      &:before {
+        content: '';
+        display: block;
+        width: 113px;
+        height: 49px;
+        background: url(../img/start-light1.svg) top left no-repeat;
+        position: absolute;
+        left: -100px;
+        top: 0px;
+        z-index: 7;
+        transition: all 1s ease-out;
+      }
+      &:after {
+        content: '';
+        display: block;
+        width: 118px;
+        height: 60px;
+        background: url(../img/start-light2.svg) top left no-repeat;
+        position: absolute;
+        left: -126px;
+        top: 0px;
+        z-index: 7;
+        transition: all 1s ease-out;
+      }
+      &:hover {
+        &:before {
+          left: 200px;
+        }
+        &:after {
+          left: 241px;
+        }
+      }
 
       &:disabled {
         opacity: 0.4;
