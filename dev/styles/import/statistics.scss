@@ -8,7 +8,7 @@
   grid-template-columns: 1fr 1fr;
   column-gap: get-vw-mobile(14px);
   row-gap: get-vw-mobile(11px);
-  aspect-ratio: 343/160;
+  // aspect-ratio: 343/160;
   @media screen and (min-width: $breakpoint-mobile) {
     background: url(../img/bg-statistic-desktop.png) center top no-repeat;
     display: flex;
