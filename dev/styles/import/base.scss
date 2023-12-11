@@ -65,7 +65,7 @@ button::-moz-focus-inner {
 .page {
   display: grid;
   grid-template-columns: 1fr;
-  max-width: calc(100% - get-vw-mobile(32px));
+  max-width: calc(100% - get-vw-mobile(16px));
   padding: get-vw-mobile(16px) 0;
   margin: 0 auto;
 
