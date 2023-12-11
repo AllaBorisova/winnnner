@@ -27,7 +27,7 @@ body {
   @media screen and (max-width: $breakpoint-mobile) {
     background: url(../img/bg-mobile-lines.png) top left repeat;
     position: relative;
-    max-width: 100%;
+    width: 100vw;
     overflow-x: hidden;
   }
 }
