@@ -1,3 +1,33 @@
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.clipped {
+  width: get-vw-mobile(185px);
+  height: get-vw-mobile(60px);
+
+  background-size: cover;
+  clip-path: url(#btn-training);
+  background: #abeeee;
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: get-vw(185px);
+    height: get-vw(60px);
+  }
+}
+.clipped2 {
+  width: get-vw-mobile(181px);
+  height: get-vw-mobile(60px);
+  background-size: cover;
+  clip-path: url(#btn-start);
+  background: #b3c3fe;
+  margin-left: get-vw-mobile(-14px);
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: get-vw(181px);
+    height: get-vw(60px);
+    margin-left: get-vw(-27px);
+  }
+}
 .btn {
   display: inline-flex;
   background: none;
@@ -15,9 +45,10 @@
     height: 60px;
     // background: url(../img/btn-training-mobile.svg) left top no-repeat;
     background-size: cover;
-    clip-path: path(
-      'M1 12C1 5.92487 5.92487 1 12 1H162.799C171.543 1 176.792 10.7101 172.001 18.0259L148.429 54.0258C146.396 57.1297 142.936 59 139.226 59H12C5.92487 59 1 54.0751 1 48V12Z'
-    );
+    // clip-path: path(
+    //   'M1 12C1 5.92487 5.92487 1 12 1H162.799C171.543 1 176.792 10.7101 172.001 18.0259L148.429 54.0258C146.396 57.1297 142.936 59 139.226 59H12C5.92487 59 1 54.0751 1 48V12Z'
+    // );
+    clip-path: url(#btn-training);
     // background: #abeeee;
     font-size: 18px;
     font-weight: 700;
