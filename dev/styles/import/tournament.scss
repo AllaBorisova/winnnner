@@ -139,14 +139,14 @@
   align-items: center;
   justify-content: center;
 
-  aspect-ratio: 7 /2;
+  // aspect-ratio: 7 /2;
   @media screen and (min-width: $breakpoint-mobile) {
     min-height: get-vw(98px);
     margin-top: get-vw(16px);
     gap: get-vw(4px);
     align-items: flex-start;
     background: none;
-    aspect-ratio: auto;
+    // aspect-ratio: auto;
   }
   &__title {
     color: rgba(24, 28, 39, 0.5);
