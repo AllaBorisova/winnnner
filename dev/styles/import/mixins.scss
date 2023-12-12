@@ -23,9 +23,9 @@
 $max-breakpoint-desktop: 1920;
 
 @function get-vw($target) {
-  // $vw-context: ($max-breakpoint-desktop * 0.01) * 1px;
-  // @return calc($target / $vw-context) * 1vw;
-  @return $target;
+  $vw-context: ($max-breakpoint-desktop * 0.01) * 1px;
+  @return calc($target / $vw-context) * 1vw;
+  // @return $target;
 }
 
 $max-breakpoint-mobile: 375;

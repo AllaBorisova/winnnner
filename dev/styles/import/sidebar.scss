@@ -2,7 +2,8 @@
   // background: url(../img/bg-sidebar.svg) top center no-repeat;
   background: #f2f3f7;
   border-radius: get-vw(16px);
-  border: get-vw(2px) solid #e5e9f1;
+  // border: get-vw(2px) solid #e5e9f1;
+  clip-path: url(#sidebar-bg);
   padding: get-vw(20px);
   display: flex;
   flex-direction: column;
