@@ -185,8 +185,8 @@
     gap: get-vw-mobile(20px);
     font-size: get-vw-mobile(16px);
     color: #13265a;
-    font-weight: 500;
-    padding-left: get-vw-mobile(10px);
+    font-weight: 700;
+    padding-left: get-vw-mobile(12px);
     @include tr;
     position: relative;
     &:before {
@@ -198,7 +198,7 @@
       //   'M1 12C1 5.92487 5.92487 1 12 1H162.378C171.2 1 176.433 10.8646 171.485 18.169L148.454 52.169C146.408 55.1903 142.996 57 139.347 57H12C5.92487 57 1 52.0751 1 46V12Z'
       // );
       clip-path: url(#btn-rating);
-      background: #dee5ee;
+      background: #f2f3f7;
       position: absolute;
       left: 0;
       top: 0px;
@@ -207,12 +207,33 @@
       z-index: 2;
     }
 
-    .btn-rating__text {
+    &__text {
       position: relative;
       z-index: 3;
       display: flex;
       align-items: center;
       gap: get-vw-mobile(20px);
+      @include tr;
+    }
+    &__light {
+      position: absolute;
+      left: get-vw-mobile(4px);
+      top: get-vw-mobile(4px);
+      z-index: 3;
+      @include tr;
+      &_mobile {
+        display: block;
+      }
+      &_desktop {
+        display: none;
+      }
+      svg {
+        width: get-vw-mobile(25px);
+        height: get-vw-mobile(12px);
+        path {
+          stroke: #fdfeff;
+        }
+      }
     }
 
     &:active,
@@ -223,6 +244,9 @@
       &:after {
         background: #2153cb;
       }
+      .btn-rating__light svg path {
+        stroke: #4e82ff;
+      }
       color: #fff;
     }
     @media screen and (min-width: $breakpoint-mobile) {
@@ -232,6 +256,7 @@
       width: get-vw(176px);
       // gap: 20px;
       font-size: get-vw(16px);
+      font-weight: 700;
       padding-left: get-vw(10px);
       height: get-vw(64px);
       flex-direction: row;
@@ -247,6 +272,7 @@
         //   'M0 12C0 5.37258 5.37258 0 12 0H162.799C172.338 0 178.064 10.5929 172.838 18.5737L149.266 54.5737C147.048 57.9597 143.274 60 139.226 60H12C5.37258 60 0 54.6274 0 48V12Z'
         // );
         clip-path: url(#btn-rating);
+        background: #dee5ee;
       }
       &:after {
         content: '';
@@ -260,10 +286,30 @@
         background: #a4c0d2;
         position: absolute;
         left: 0;
-        top: 4px;
+        top: get-vw(4px);
         z-index: 7;
         @include tr;
         z-index: 1;
+      }
+      &__light {
+        position: absolute;
+        left: get-vw(6px);
+        top: get-vw(6px);
+        z-index: 3;
+        @include tr;
+        &_mobile {
+          display: none;
+        }
+        &_desktop {
+          display: block;
+        }
+        svg {
+          width: get-vw(25px);
+          height: get-vw(12px);
+          path {
+            stroke: #e7eef7;
+          }
+        }
       }
       .icon {
         background: none;
@@ -275,11 +321,19 @@
             display: none;
           }
         }
+        &:after {
+          display: none;
+        }
       }
       &:hover {
-        &:after {
-          top: 6px;
+        &:before,
+        .btn-rating__text,
+        .btn-rating__light {
+          transform: translate3d(0px, -2px, 0);
         }
+        // &:after {
+        //   top: 6px;
+        // }
       }
     }
   }
@@ -289,7 +343,7 @@
     gap: get-vw-mobile(20px);
     font-size: get-vw-mobile(16px);
     color: #13265a;
-    font-weight: 500;
+    font-weight: 700;
     padding-right: get-vw-mobile(10px);
     margin-left: get-vw-mobile(-27px);
     background-size: contain;
@@ -306,7 +360,7 @@
       // );
       clip-path: url(#btn-rules);
 
-      background: #dee5ee;
+      background: #f2f3f7;
       position: absolute;
       right: 0;
       top: 0px;
@@ -315,13 +369,34 @@
       z-index: 2;
     }
 
-    .btn-rules__text {
+    &__text {
       position: relative;
       z-index: 3;
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
       gap: get-vw-mobile(20px);
+      @include tr;
+    }
+    &__light {
+      position: absolute;
+      left: get-vw-mobile(36px);
+      top: get-vw-mobile(4px);
+      z-index: 3;
+      @include tr;
+      &_mobile {
+        display: block;
+      }
+      &_desktop {
+        display: none;
+      }
+      svg {
+        width: get-vw-mobile(45px);
+        height: get-vw-mobile(12px);
+        path {
+          stroke: #fdfeff;
+        }
+      }
     }
     &:active,
     &.active {
@@ -331,6 +406,9 @@
       }
       &:after {
         background: #2153cb;
+      }
+      .btn-rules__light svg path {
+        stroke: #4e82ff;
       }
       // background: #2b69ff;
       color: #fff;
@@ -342,6 +420,7 @@
       font-size: get-vw(16px);
       padding-right: get-vw(32px);
       margin-left: get-vw(-5px);
+      font-weight: 700;
       // clip-path: path(
       //   'M176 47.9999C176 54.6273 170.627 59.9999 164 59.9999L12.44 60C3.05956 60 -2.69383 49.7206 2.21138 41.7249L24.2966 5.72497C26.4788 2.16796 30.3522 2.20038e-06 34.5252 2.57452e-06L164 1.41829e-05C170.627 1.47771e-05 176 5.3726 176 12L176 47.9999Z'
       // );
@@ -351,6 +430,20 @@
         flex-direction: row;
         gap: get-vw(8px);
       }
+      &__light {
+        position: absolute;
+        left: get-vw(22px);
+        top: get-vw(6px);
+        z-index: 3;
+        @include tr;
+        svg {
+          width: get-vw(45px);
+          height: get-vw(12px);
+          path {
+            stroke: #e7eef7;
+          }
+        }
+      }
       &:before {
         height: get-vw(60px);
         width: get-vw(178px);
@@ -358,6 +451,7 @@
         //   'M176 47.9999C176 54.6273 170.627 59.9999 164 59.9999L12.44 60C3.05956 60 -2.69383 49.7206 2.21138 41.7249L24.2966 5.72497C26.4788 2.16796 30.3522 2.20038e-06 34.5252 2.57452e-06L164 1.41829e-05C170.627 1.47771e-05 176 5.3726 176 12L176 47.9999Z'
         // );
         clip-path: url(#btn-rules);
+        background: #dee5ee;
       }
       &:after {
         content: '';
@@ -386,11 +480,19 @@
             display: none;
           }
         }
+        &:after {
+          display: none;
+        }
       }
       &:hover {
-        &:after {
-          top: get-vw(6px);
+        &:before,
+        .btn-rules__text,
+        .btn-rules__light {
+          transform: translate3d(0px, -2px, 0);
         }
+        // &:after {
+        //   top: get-vw(6px);
+        // }
       }
     }
   }
@@ -507,7 +609,7 @@
   &-hamburger {
     width: get-vw-mobile(48px);
     height: get-vw-mobile(48px);
-    border-radius: get-vw(8px);
+    border-radius: get-vw-mobile(8px);
     background: #2153cb;
     &__gradient {
       background: linear-gradient(to bottom, #8b9ef4, #4e7af6, #2e6afd);
