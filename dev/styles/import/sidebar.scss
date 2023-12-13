@@ -1,6 +1,6 @@
 .sidebar {
   background: url(../img/bg-sidebar.svg) top center no-repeat;
-  background: #f2f3f7;
+  // background: #f2f3f7;
   border-radius: get-vw(16px);
   // border: get-vw(2px) solid #e5e9f1;
   // clip-path: url(#sidebar-bg);
@@ -26,13 +26,13 @@
     align-items: center;
     gap: get-vw(16px);
     &:hover {
-      button span:before {
+      .icon .icon__img:before {
         filter: grayscale(100%);
       }
-      button:hover span:before {
+      .icon:hover .icon__img:before {
         filter: grayscale(0%);
       }
-      button:hover .tooltip {
+      .icon:hover .tooltip {
         display: inline-flex;
       }
     }

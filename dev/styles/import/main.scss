@@ -1,10 +1,21 @@
 .logo {
-  svg {
-    width: get-vw-mobile(40px);
-    height: get-vw-mobile(40px);
-    @media screen and (min-width: $breakpoint-mobile) {
-      width: get-vw(50px);
-      height: get-vw(50px);
-    }
+  display: flex;
+  width: get-vw-mobile(40px);
+  height: get-vw-mobile(40px);
+  @media screen and (min-width: $breakpoint-mobile) {
+    width: get-vw(50px);
+    height: get-vw(50px);
   }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  // svg {
+  //   width: get-vw-mobile(40px);
+  //   height: get-vw-mobile(40px);
+  //   @media screen and (min-width: $breakpoint-mobile) {
+  //     width: get-vw(50px);
+  //     height: get-vw(50px);
+  //   }
+  // }
 }
