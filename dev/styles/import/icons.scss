@@ -8,7 +8,7 @@
   @include flexcc;
   line-height: 0;
   position: relative;
-  span {
+  &__img {
     background: #dee5ee;
     border-radius: get-vw-mobile(8px);
     width: 100%;
@@ -52,7 +52,7 @@
     width: get-vw(50px);
     height: get-vw(50px);
     border-radius: get-vw(8px);
-    span {
+    &__img {
       border-radius: get-vw(8px);
       // transform: translate3d(get-vw(-2px), get-vw(-3px), 0);
       &:after {
