@@ -62,6 +62,11 @@
 //     e.target.classList.toggle('active');
 //   });
 // });
+
+if (screen.width <= 767) {
+  document.querySelector('.btn-rules').classList.remove('active');
+}
+
 document.addEventListener('DOMContentLoaded', function (event) {
   const element = document.querySelectorAll('.btn-games');
 
