@@ -565,8 +565,11 @@
     }
     &:active,
     &.active {
-      background: $color-primary;
-      box-shadow: 0px get-vw(4px) 0px 0px #2153cb;
+      .gradient {
+        transform: translate3d(0px, get-vw(-4px), 0);
+      }
+      // background: $color-primary;
+      // box-shadow: 0px get-vw(4px) 0px 0px #2153cb;
     }
     &.disabled {
       opacity: 0.4;
