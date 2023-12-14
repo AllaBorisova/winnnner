@@ -2,6 +2,8 @@
   display: flex;
   width: get-vw-mobile(40px);
   height: get-vw-mobile(40px);
+  position: relative;
+  z-index: 1;
   @media screen and (min-width: $breakpoint-mobile) {
     width: get-vw(50px);
     height: get-vw(50px);
